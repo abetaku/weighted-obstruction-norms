@@ -16,7 +16,7 @@ if current_sources != verified_sources:
 for name,digest in v['source_sha256'].items():
  if hashlib.sha256((root/name).read_bytes()).hexdigest()!=digest:
   raise SystemExit('Stale verification for '+name+'; run scripts/verify.py first.')
-files=[root/'WeightedObstructionNorms.lean',root/'lakefile.toml',root/'lake-manifest.json',root/'lean-toolchain',root/'docs/LEAN.md',root/'docs/FORMALIZATION_STATUS.md']
+files=[root/'LICENSE',root/'README.md',root/'README_ja.md',root/'WeightedObstructionNorms.lean',root/'lakefile.toml',root/'lake-manifest.json',root/'lean-toolchain',root/'docs/LEAN.md',root/'docs/FORMALIZATION_STATUS.md']
 files+=sorted((root/'WeightedObstructionNorms').glob('*.lean'))
 files+=sorted((root/'scripts').glob('*.py'))
 files+=sorted((root/'paper').glob('*.tex'))
