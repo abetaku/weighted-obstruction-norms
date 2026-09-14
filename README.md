@@ -1,129 +1,128 @@
 # Weighted Obstruction Norms for Finite Marginal Complexes
 
-**有限周辺化複体の重み付き障害ノルム**  
+[English](README.md) | [日本語](README_ja.md)
+
 Takuya Abe
 
-部分的な観測を全体として整合させるとき、解が存在することと、その解を一定の大きさに抑えられることは別の問題です。本論文は、状態の支持を広げてコホモロジー的な障害を解消するときに必要な「補正の大きさ」を、重み付きノルムで定量化します。
+When reconciling partial observations into a consistent whole, the existence of a solution and the existence of a solution within a prescribed bound are different questions. This paper uses weighted norms to quantify the size of the correction needed to resolve a cohomological obstruction by enlarging the support of the state space.
 
-| 論文 | PDF | TeX |
+| Paper | PDF | TeX |
 | --- | --- | --- |
-| 日本語 | [読む](paper/weighted_obstruction_norms_ja.pdf) | [ソース](paper/weighted_obstruction_norms_ja.tex) |
+| Japanese | [Read](paper/weighted_obstruction_norms_ja.pdf) | [Source](paper/weighted_obstruction_norms_ja.tex) |
 | English | [Read](paper/weighted_obstruction_norms_en.pdf) | [Source](paper/weighted_obstruction_norms_en.tex) |
 
-## 要旨
+## Abstract
 
-有限個の観測と指定された支持に対し、局所的な符号付き測度の周辺化から増大Čech複体を構成します。指定された支持の上に非零のコホモロジー類があるとき、全支持を持つ確率分布を少量混合することで原始元の存在は回復しますが、その最小重み付きノルムは発散します。本論文は、固定された非零類に対し、この最小値が十分小さい正の混合率で、その逆数に**厳密に比例する**ことを示します。
+We construct an augmented Čech complex from the marginalization of local signed measures associated with a finite collection of observations and a prescribed support. When a nonzero cohomology class exists on that support, mixing in a small amount of a full-support probability law restores the existence of a primitive, but its minimum weighted norm diverges. For a fixed nonzero class, we show that this minimum is **exactly proportional to the reciprocal of the mixing parameter** for all sufficiently small positive parameters.
 
-比例係数は障害空間上のノルムを定めます。その単位球は、相対複体のコサイクル空間と重み付き座標箱との共通部分を、接続準同型で写した中心対称多面体です。このノルムは観測族を生成するリストの選び方によらず、支持の拡大と観測の制限に対して非増大的です。さらに、次数0・1での順序複体表示との等長比較、二値状態による厳密な計算例、および共通の消失スケールを持つ非アフィン重みへの極限公式を与えます。
+The coefficient defines a norm on the obstruction space. Its unit ball is a centrally symmetric polytope: the image, under the connecting homomorphism, of the intersection of the relative cocycle space with a weighted coordinate box. The norm is independent of the list generating the observation family and is nonincreasing under support enlargement and observation restriction. We also establish isometric comparison with the order-complex presentation in degrees zero and one, exact computations for binary examples, and a limiting formula for nonaffine weights with a common vanishing scale.
 
-## 何を測る理論か
+## What does the theory measure?
 
-例えば、三つの変数を同時に観測できず、二つずつの観測しか得られない状況を考えます。各観測の重なりには、周辺化して比較するための整合条件があります。また、全体の状態を特定の集合に限ると、その集合の中だけでは実現できない局所データや補正が現れます。
+Consider three variables that cannot be observed jointly, but can be observed in pairs. On overlaps, marginalization provides consistency conditions for comparing observations. Restricting the global states to a specified set can create local data or corrections that cannot be realized within that set.
 
-ここで、もともと許されなかった状態に小さな確率を与えます。線形方程式が解けるようになっても、まれな状態に必要な補正を担わせるため、その確率に対する補正の比率が大きくなり得ます。この理論が測るのは、その比率を最適化しても残る負担です。
+Now assign small positive probabilities to previously excluded states. Even if the linear equations become solvable, the required corrections may have to be carried by rare states, making the ratio of correction to probability large. The theory measures the burden that remains even after optimizing this ratio.
 
-具体的には、観測する変数の集合を $`A`$、その観測値を $`a`$、局所的な符号付き測度を $`x_A(a)`$、正の参照周辺確率を $`q_A(a)`$ として、
+More precisely, let $`A`$ be a set of observed variables, $`a`$ an observed state, $`x_A(a)`$ a local signed measure, and $`q_A(a)`$ a positive reference marginal probability. Define
 
 ```math
 m_A(a)=\frac{x_A(a)}{q_A(a)}
 ```
 
-を考えます。重み付きノルムは、必要な観測成分と状態にわたる $`|m_A(a)|`$ の最大値です。したがって「ノルムが1以下」という条件は、各成分で $`|x_A(a)|\le q_A(a)`$ を意味します。
+The weighted norm is the maximum of $`|m_A(a)|`$ over the relevant observation components and states. Thus, a norm bound of one means that $`|x_A(a)|\le q_A(a)`$ in each component.
 
-次数0では整合的な局所データの大域的な拡張を、次数1では指定された局所的不整合の補正を扱います。符号付き測度を許すため、非負の確率分布が存在するかという問題とは条件が異なります。
+In degree zero, the problem concerns extending consistent local data to a global signed measure. In degree one, it concerns correcting a prescribed local inconsistency. Because signed measures are allowed, these conditions differ from the existence of a nonnegative probability distribution.
 
-## 中心となる結果
+## Main result
 
-全状態集合を $`E`$、もともと許される状態の集合を $`S\subseteq E`$ とします。$`S`$ 上で正の確率を持ち、その外ではゼロとなる分布を $`q_0`$、$`E`$ のすべての状態で正となる参照分布を $`q_1`$ とし、混合率 $`0<\varepsilon\le1`$ により
+Let $`E`$ be the full state space and $`S\subseteq E`$ the set of originally allowed states. Let $`q_0`$ be a probability law that is positive on $`S`$ and zero outside it, and let $`q_1`$ be a reference law that is positive on every state of $`E`$. For a mixing parameter $`0<\varepsilon\le1`$, define
 
 ```math
 q_\varepsilon=(1-\varepsilon)q_0+\varepsilon q_1
 ```
 
-を定めます。
-
-$`C_S`$ は支持 $`S`$ に対応する周辺化複体、$`\delta`$ はその微分、$`c`$ は次数 $`p\ge0`$ の固定されたコサイクルです。$`\delta c=0`$ は整合条件を表し、コホモロジー類 $`[c]`$ は、$`c`$ が元の支持上で原始元を持つかどうかの障害を表します。$`j`$ を支持の外へゼロで拡張する写像とすると、全状態上での原始元 $`x`$ の最小コストは
+Write $`C_S`$ for the marginal complex associated with support $`S`$, $`\delta`$ for its differential, and $`c`$ for a fixed cocycle of degree $`p\ge0`$. The equation $`\delta c=0`$ expresses consistency, while the cohomology class $`[c]`$ records the obstruction to finding a primitive of $`c`$ on the original support. If $`j`$ denotes extension by zero outside the support, the minimum cost of a primitive $`x`$ on the full state space is
 
 ```math
 \Gamma_\varepsilon(c)
 =\min_{\delta x=jc}\|x\|_{q_\varepsilon,p-1}
 ```
 
-です。ここで $`\|x\|_{q_\varepsilon,p-1}`$ は次数 $`p-1`$ の重み付き最大ノルムで、次数 $`-1`$ では全状態上の符号付き測度に対するノルムです。
+Here $`\|x\|_{q_\varepsilon,p-1}`$ is the weighted maximum norm in degree $`p-1`$; in degree $`-1`$, it is the norm on signed measures on the full state space.
 
-**$`[c]\ne0`$ なら、十分小さい正の $`\varepsilon`$ に対して**
+**If $`[c]\ne0`$, then for all sufficiently small positive $`\varepsilon`$,**
 
 ```math
 \Gamma_\varepsilon(c)=\frac{N([c])}{\varepsilon}.
 ```
 
-$`N`$ は支持・観測族・参照分布 $`q_1`$ によって定まる障害ノルムです。この等式は近似式ではありません。ただし、適用される混合率の範囲はデータに依存します。$`[c]=0`$ の場合には、この発散は生じず、最小コストは元の支持上の最小値に収束します。
+The obstruction norm $`N`$ is determined by the support, the observation family, and the reference law $`q_1`$. This is an exact equality, not an approximation. The range of mixing parameters for which it holds depends on the data. When $`[c]=0`$, this divergence does not occur: the minimum cost converges to the minimum on the original support.
 
-| 結果 | 意味 |
+| Result | Interpretation |
 | --- | --- |
-| 厳密な逆比例則 | 固定された非零障害を解消するコストの発散係数を特定する |
-| 相対コホモロジーによる表示 | 新しく許された座標から障害を解消する最小コストを、接続準同型を通した商ノルムとして表す |
-| 観測リスト不変性 | 同じ下降閉観測族を生成するリストなら、障害空間は等長に同一視できる |
-| 支持拡大・観測制限による比較 | 誘導されるコホモロジー写像の下で、障害ノルムは増大しない |
-| 共通消失スケールへの拡張 | 新しい座標の重みが共通の速さでゼロに近づく場合にも、再尺度化した最小値の極限を記述できる |
+| Exact reciprocal law | Identifies the coefficient governing the divergence of the cost of resolving a fixed nonzero obstruction |
+| Relative cohomology description | Expresses the minimum cost of resolving an obstruction through newly available coordinates as a quotient norm induced by the connecting homomorphism |
+| Invariance under generating lists | Lists generating the same downward-closed observation family yield isometrically identified obstruction spaces |
+| Comparison under support enlargement and observation restriction | The obstruction norm does not increase under the induced cohomology maps |
+| Extension to a common vanishing scale | Describes the limit of the rescaled minimum when the new-coordinate weights vanish at a common scale |
 
-## 二値状態で見る具体例
+## Binary examples
 
-論文では、各変数が $`-1`$ または $`1`$ を取る例を計算しています。いずれも、元の分布は全変数の値が等しい状態上の一様分布、参照分布は全状態上の一様分布です。
+The paper gives explicit computations for variables taking values $`-1`$ or $`1`$. In both examples, the original law is uniform on the states where all variables agree, and the reference law is uniform on the full state space.
 
-- **二変数を個別に観測する例（次数0）**：論文で指定した局所データの原始元最小値は、すべての $`0<\varepsilon\le1`$ で $`2/\varepsilon`$ です。障害空間は一次元で、その指定された類のノルムは $`2`$ になります。
-- **三変数を二つずつ観測する例（次数1）**：論文で指定した不整合に対する最小補正ノルムは、すべての $`0<\varepsilon\le1`$ で次の値になります。
+- **Two variables observed separately (degree zero):** For the local datum specified in the paper, the minimum primitive norm is $`2/\varepsilon`$ for every $`0<\varepsilon\le1`$. The obstruction space is one-dimensional, and the specified class has norm $`2`$.
+- **Three variables observed in pairs (degree one):** For the prescribed inconsistency in the paper, the minimum correction norm is the following for every $`0<\varepsilon\le1`$.
 
 ```math
 \Gamma_\varepsilon(c)=\max\left\lbrace 1,\frac{2}{3\varepsilon}\right\rbrace.
 ```
 
-後者では、どれほど小さい正の混合率でも線形方程式には解があります。一方、**ノルム1以下の補正が存在するのは $`\varepsilon\ge2/3`$ のときに限られます**。これが「解の存在」と「大きさを制限した実現可能性」の違いを示す例です。
+In the second example, the linear equations have a solution for every positive mixing parameter, however small. Yet **a correction of norm at most one exists if and only if $`\varepsilon\ge2/3`$**. This illustrates the distinction between solvability and realizability within a prescribed bound.
 
-## 位置づけと範囲
+## Scope and context
 
-本論文は、有限次元のコホモロジー、相対複体、商ノルムを、支持と確率重みを持つ周辺化問題に結びつけるものです。主眼は、障害の有無に加えて、その解消コストを測り、観測や支持を変えたときにも比較できる形にすることにあります。
+The paper connects finite-dimensional cohomology, relative complexes, and quotient norms with marginal problems carrying support constraints and probability weights. Its focus is to measure the cost of resolving an obstruction, alongside detecting its existence, in a way that permits comparison when observations or supports change.
 
-対象は有限状態・実係数の符号付き測度です。得られるノルムを文脈性の尺度と同定してはいません。また、順序複体表示との等長比較は次数0・1で示しており、次数2以上での等長性や、座標ごとに異なる消失スケールの解析は今後の課題です。
+The setting consists of finite state spaces and real signed measures. The resulting norm is not identified with a contextuality measure. Isometric comparison with the order-complex presentation is established in degrees zero and one; isometry in degrees two and higher, and the analysis of unequal coordinate vanishing scales, remain questions for further study.
 
-## コードと検証資料
+## Code and verification records
 
-論文に対応するLeanコードと検証記録を同梱しています。詳細は [形式化の対応範囲](docs/FORMALIZATION_STATUS.md)、[原稿対応表](audit/paper_coverage.json)、[検証記録](audit/verification.json) を参照してください。記録は過去の実行結果であり、READMEの更新時にLeanを再実行したものではありません。
+Lean code corresponding to the paper and its verification records are included. See the [formalization scope](docs/FORMALIZATION_STATUS.md), [manuscript coverage table](audit/paper_coverage.json), and [verification record](audit/verification.json). These records describe an earlier execution; Lean was not rerun as part of this README update.
 
-| 場所 | 内容 |
+| Location | Contents |
 | --- | --- |
-| [paper/](paper/) | 日英の論文PDFとTeX |
-| [WeightedObstructionNorms/](WeightedObstructionNorms/) | Lean証明コード |
-| [audit/](audit/) | 原稿との対応、ビルド・公理監査の記録、再現環境 |
-| [scripts/](scripts/) | 検証・配布用スクリプト |
-| [docs/](docs/) | 形式化の説明、共同研究ルール、改訂・取り込み履歴 |
+| [paper/](paper/) | Japanese and English manuscripts in PDF and TeX |
+| [WeightedObstructionNorms/](WeightedObstructionNorms/) | Lean proof code |
+| [audit/](audit/) | Manuscript correspondence, build and axiom-audit records, and reproduction environment |
+| [scripts/](scripts/) | Verification and packaging scripts |
+| [docs/](docs/) | Formalization documentation, collaboration rules, and revision and import history |
 
-Lean 4.19.0のツールチェーンを管理するelanとPython 3が使える環境で、リポジトリのルートから再検証できます。mathlibの版は設定ファイルに固定されています。
+To rerun verification from the repository root, use an environment with Python 3 and elan, the toolchain manager for Lean 4.19.0. The mathlib version is pinned in the configuration files.
 
 ```sh
 lake exe cache get
 python3 scripts/verify.py
 ```
 
-検証スクリプトは現在の監査ファイルを更新します。コード化された命題の検証と、原稿との意味上の対応の確認は区別してください。実装の詳細は [Lean形式化の技術説明](docs/LEAN.md) にまとめています。
+The verification script updates the current audit files. Checking the encoded propositions and confirming their semantic correspondence with the manuscript are distinct tasks. Implementation details are described in the [Lean technical documentation](docs/LEAN.md) (in Japanese).
 
-## ライセンス
+## License
 
 Copyright © 2026 Takuya Abe
 
-本リポジトリの著作物は、下表の例外を除き **Apache License 2.0** の下で提供します。第三者に権利がある部分、依存ライブラリ、および個別に利用条件が明示された部分には、それぞれの条件が適用されます。
+The works in this repository are provided under **Apache License 2.0**, except as specified below. Third-party material, dependencies, and material with separate stated terms remain subject to their respective terms.
 
-| 対象 | 適用ライセンス |
+| Material | Applicable license |
 | --- | --- |
-| `paper/` 内の論文PDF・TeX、`README.md`、`docs/` 内のMarkdown文書（履歴文書を含む） | **CC BY 4.0（表示 4.0 国際）** — [概要](https://creativecommons.org/licenses/by/4.0/deed.ja)・[正式な条文](https://creativecommons.org/licenses/by/4.0/legalcode.ja) |
-| 上記以外のプロジェクトファイル：Leanコード、スクリプト、設定ファイル、`AGENTS.md`、`audit/` の監査資料など | **Apache License 2.0** — [全文](LICENSE) |
+| Manuscript PDFs and TeX files in `paper/`, `README.md`, `README_ja.md`, and Markdown documents in `docs/` (including historical documents) | **CC BY 4.0 (Attribution 4.0 International)** — [Summary](https://creativecommons.org/licenses/by/4.0/) · [Legal code](https://creativecommons.org/licenses/by/4.0/legalcode.en) |
+| All other project files, including Lean code, scripts, configuration files, `AGENTS.md`, and audit material in `audit/` | **Apache License 2.0** — [Full text](LICENSE) |
 
-論文・解説文書は、適切な著者等の表示、ライセンスへのリンク、変更した場合の明示など、CC BY 4.0の条件に従って複製・再配布・翻訳・改変・商用利用ができます。コード等は、Apache License 2.0に定めるライセンス・著作権表示の保持、変更の明示などの条件に従って利用・改変・再配布できます。
+The manuscripts and documentation may be copied, redistributed, translated, adapted, and used commercially under the terms of CC BY 4.0, including appropriate attribution, a link to the license, and an indication of changes. Code and other material may be used, modified, and redistributed under Apache License 2.0, including its requirements to retain license and copyright notices and indicate changes.
 
-研究や教材で本成果を利用する際は、論文名・著者名・リポジトリURLに加え、参照した版またはコミットを示していただけると幸いです。この引用のお願いは、ライセンスに追加の利用制限を課すものではありません。
+When using this work in research or teaching, please consider citing the paper title, author, repository URL, and the version or commit used. This citation request does not impose additional restrictions on the licenses.
 
-## 研究・検証の位置づけ
+## Research and verification status
 
-本成果は、査読を受けていない個人の数学研究です。Lean検証の対象と原稿との対応範囲は、[形式化対応表](docs/FORMALIZATION_STATUS.md)および[検証記録](audit/verification.json)を参照してください。
+This work is personal mathematical research and has not undergone peer review. See the [formalization coverage](docs/FORMALIZATION_STATUS.md) and [verification record](audit/verification.json) for the scope of Lean verification and its correspondence with the manuscript.
 
-Leanによる検証はコードに記述された命題を対象とし、原稿全体との意味上の一致、新規性、個別の用途への適合性を自動的に保証するものではありません。資料とコードは現状のまま提供され、保証および責任の制限については各ライセンスの条項が適用されます。誤りの指摘や改善提案を歓迎します。
+Lean verification concerns the propositions encoded in the code. It does not automatically guarantee semantic correspondence with the entire manuscript, novelty, or suitability for a particular use. The material and code are provided as is; warranty disclaimers and limitations of liability are governed by the respective licenses. Reports of errors and suggestions for improvement are welcome.
