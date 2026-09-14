@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "claim_id": "weighted-obstruction-norms-complete-lean-formalization",
+  "repository": {
+    "commit": null,
+    "dirty": false,
+    "source_snapshot": "Individual source SHA-256 hashes recorded; this deliverable is not a git checkout."
+  },
+  "command": "python3 scripts/verify.py (runtime environment: audit/environment.md)",
+  "environment": {
+    "software": [
+      "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+      "mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "Python 3.12"
+    ],
+    "hardware": "Linux x86_64; 9 reported CPUs; approximately 21 GiB RAM; 8 Lean threads"
+  },
+  "mathematics": {
+    "assertion_tested": "All 640 named theorem/lemma declarations and 5 additional key definitions compile and use only permitted standard axioms. Coverage: all fourteen numbered mathematical results, including Appendix A.1 and actual binary examples.",
+    "coefficient_domain": "mathlib real numbers ℝ; no floating-point surrogate",
+    "conventions": "Weighted norms use the finite Pi supremum norm, with the empty-coordinate norm equal to zero. Triangle entries are (++,+-,-+,--) and observation order (12,23,13).",
+    "inputs": [
+      {
+        "path": "WeightedObstructionNorms.lean",
+        "sha256": "71be85cda58eed594bfe5b73f9401e41a18cf85585acd90e010a603dd14b009e"
+      },
+      {
+        "path": "WeightedObstructionNorms/AlgebraicComplex.lean",
+        "sha256": "d7f656d9c8efcb96c65d6d0a018079ea38e645ba9cd098f73f4de63f9f662dfe"
+      },
+      {
+        "path": "WeightedObstructionNorms/AlternatingCancellation.lean",
+        "sha256": "e1bff0147431f1a2f34bb8c90e5d92a208eeedb255bd8f61e12fab921594c7fa"
+      },
+      {
+        "path": "WeightedObstructionNorms/AlternatingEvaluation.lean",
+        "sha256": "e32c3bb58474ef16724968fa8102866db98aeda5ec87a81629295182eaa1a2f4"
+      },
+      {
+        "path": "WeightedObstructionNorms/BinaryExamples.lean",
+        "sha256": "c4b5ce80cb57a694dd132c971dd13d09974e34ceacbf4dbf6c0aa211014abc6a"
+      },
+      {
+        "path": "WeightedObstructionNorms/BinaryMarginals.lean",
+        "sha256": "fb6301d3052e041306a168b4afefb39933bc26f0d54c5b1d467a4cc4c6b00f81"
+      },
+      {
+        "path": "WeightedObstructionNorms/BinaryPairCoordinates.lean",
+        "sha256": "42edc0fc7a2459c74331eee673628c238d33d3601fecfc699b54243de7d01f42"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechAllDegrees.lean",
+        "sha256": "5e665673c1ce0cb18b55a25abb743a925f77f7c3a9970fd99c4fcfc4edd97b04"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechAugmentationExtension.lean",
+        "sha256": "423f596c2983c07cc8a37833cd0febb6cf6bdfce09e4a1748498817a8be35d76"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechAugmentationNorm.lean",
+        "sha256": "e6efe38892ba44bf856bd56741b210493c7e6df37288cf00361c2a9fcb77b13a"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechCoordinateNorm.lean",
+        "sha256": "5e38724f5a8c50e83bcd46533409266191ce26eb01ae4105c0a1686beeebea1c"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechLowComparison.lean",
+        "sha256": "bc4e3bd12a1cb692a41a715963682e3fff18c3980be16c438c3a4aa24ccf15e3"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechLowDegrees.lean",
+        "sha256": "39fc57bb90d600c32c006c5367187002086d339d0a15f6af065c3ebdafa9d5c5"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechObstruction.lean",
+        "sha256": "6f440d5ef8869fbd75a1dc88f3c2a73ff68dcd028138bcb29417f7942c18d2c5"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechPolytope.lean",
+        "sha256": "92777a91fd82457e790539ee2a4cb55bf9766feca9d9de02b2f1b9eaada85a99"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechPrimitive.lean",
+        "sha256": "f3eaf8576347eb2468044ed92300b0f5f03eef78cf13288ab012bb5b21c54867"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechReciprocal.lean",
+        "sha256": "98b59d968f8b3e3c82d143653ea6015e16e7aa8ebfff2ac5efb88acbbe2251fc"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechRelative.lean",
+        "sha256": "57b286fd51d50bdadb046ed226eb62eafa67dcef85c3d1328f1a2a7dae7e56a5"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechRelativeIsometry.lean",
+        "sha256": "036d52eb44f93789944bedd857b214af8fa0ccdbdffb1fd1b6aeda44a34630de"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechSplitting.lean",
+        "sha256": "6b7186d54775cd16bd7f595de1d566ad0e4bbe3f1ba0fb82fb8815adb9aed616"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechSupportNorm.lean",
+        "sha256": "269ff63e1d7d763038205e956f43b2def3f1773c0e6d5ad67306be55d2b0504c"
+      },
+      {
+        "path": "WeightedObstructionNorms/CechWeights.lean",
+        "sha256": "f9a4998b0591bdec4119c00d1dbeecc79d2d7636d8473a851aebb42a192cfc5e"
+      },
+      {
+        "path": "WeightedObstructionNorms/CommonScale.lean",
+        "sha256": "798b863fa6154ec8b7f163ad6cd5ad27a266046161f0ce31ed170f17d6edc28f"
+      },
+      {
+        "path": "WeightedObstructionNorms/Comparison.lean",
+        "sha256": "15a002752f9b5a766c366114f9b3bfb5f8e1c6f54a82b0221053ed35001d721b"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalCocycle.lean",
+        "sha256": "c0e73a99e98beed3a8d7229a8f5d470ef288bc541c0552cbdf1bbc24d0c78852"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalCohomology.lean",
+        "sha256": "2306b022cb3da4eb49f3b0b8e1e6753f3ddde8f3257a50abddcb6532787817ea"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalConnecting.lean",
+        "sha256": "9a50118f39879b3e413989290e2f584f51390fc442d878616f9a3f0b910c1382"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalCoordinates.lean",
+        "sha256": "dd95a185831ed414cca4818e0307d4cf746a5a3dae33d2ccf2b5373bc791b800"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalCost.lean",
+        "sha256": "4b29d1f2d8b319fe1ba73adc5a82b5dcf7dfea847767f7b19291a417b4f9d695"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalNorm.lean",
+        "sha256": "0f3a51de8f11fdeb01bbf14130273c218c083a6901f98c199a5445a1e84b84c8"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalRelativeCoordinates.lean",
+        "sha256": "6316d5f217d2330b00fbb29c432815ed840fb9c6152092a443138bfdf054479d"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalSetup.lean",
+        "sha256": "d15ab14bfcea7aae3d9b3576dc3559194e8226464aa9106b856ace8dbf2bbb44"
+      },
+      {
+        "path": "WeightedObstructionNorms/DiagonalSpanning.lean",
+        "sha256": "4047326b5df8a509e71101d03c99436e4cf8b30481fc090edcd72e0348bc8781"
+      },
+      {
+        "path": "WeightedObstructionNorms/Duality.lean",
+        "sha256": "ff6b951800341018a246078a928b320fcb50509531cbd02b81b5529d1c72b0f3"
+      },
+      {
+        "path": "WeightedObstructionNorms/FiniteNormedCategory.lean",
+        "sha256": "f0d91acc8237dd597488c0e67a5137179fcaa01173be2632ae25df9d68d60a72"
+      },
+      {
+        "path": "WeightedObstructionNorms/FiniteObservations.lean",
+        "sha256": "2832950cc70a1b0c7ccf127e4be4576c4e93444cb55248473c4fe53401d620a5"
+      },
+      {
+        "path": "WeightedObstructionNorms/FullSupportAcyclicity.lean",
+        "sha256": "e09e6e4633e727af1b8ca03e323a391f8be474e356e5c1e45904059ff95a9e1d"
+      },
+      {
+        "path": "WeightedObstructionNorms/InteractionCoordinates.lean",
+        "sha256": "91488fdeb25bc24ad4f5804c0ae5314bad9b466f999a77454f05f3bbbf5839ec"
+      },
+      {
+        "path": "WeightedObstructionNorms/LinearProblem.lean",
+        "sha256": "673650dd7e5d16deb2cd9813bd0d58a498bd02424d7bd579b17c8e1d4155f5b5"
+      },
+      {
+        "path": "WeightedObstructionNorms/ListPrism.lean",
+        "sha256": "775835ad865ab8f0a4d246b3955ae3da50849be4968795822d8db4aabc913a94"
+      },
+      {
+        "path": "WeightedObstructionNorms/Marginal.lean",
+        "sha256": "7cab554db69dfcf0fc45dcbd1ac86b5e752bad5e3689d51809a3c0f1ff30eeb3"
+      },
+      {
+        "path": "WeightedObstructionNorms/Minimum.lean",
+        "sha256": "2605f6c3b1b4fdc07e568a26438dd929a8bab841e46a77468413b61358503f51"
+      },
+      {
+        "path": "WeightedObstructionNorms/NormedCohomology.lean",
+        "sha256": "62234d62d8a0ce55b776c9d9d3ffb81fa40a94a4c478c048c3412cfc15ce349a"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationAugmentation.lean",
+        "sha256": "6490271c2c5d56c6a503e692d738a749f25e66472f840eb4f76bb96a2307e3ee"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationFunctor.lean",
+        "sha256": "6389b5788543d2b94ad8707841f643011346d4db9aca257278d025d48c344a7c"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationHomotopy.lean",
+        "sha256": "c4bfa312688f1c0c88216ffbd8f315841dd6f140c288d4e1a8ab6ab6273b8ab8"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationListInvariance.lean",
+        "sha256": "5cf01f7c78cd4fa1b6c1fbc466c6cbb662cf4380f96317ba5e408b9e3246829f"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationRestriction.lean",
+        "sha256": "094947245e04b781afd2c5cbc3f8831b288cb0140acbd615a6f9789d545266cd"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationRestriction0.lean",
+        "sha256": "a9560df4d47333c057b9a5406e861bbb63f89130f289c8428d12c6ed75a0a4dd"
+      },
+      {
+        "path": "WeightedObstructionNorms/ObservationRestrictionNorm.lean",
+        "sha256": "ef70d622ddcebdcbeb8285f4d6fd703a1f742bae2a0c384982848fc2398bee44"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderComparison.lean",
+        "sha256": "739a2c1ebe3735b78a368069502b5737a56f32608ec97d8e787c368dd5c592d8"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderComplex.lean",
+        "sha256": "a4496d4398ef61e1c7651de22ef319afa3ef5a89d1db0d40362e40a407add51f"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderLowIsometry.lean",
+        "sha256": "74c25f49b2a999a76c6846c9cd68d9dac9cdf073e75457112c7113ee5c457cd2"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderLowOneInjective.lean",
+        "sha256": "86bd99448c799e95ae3f838bb685465995a937ba456cf6f791bf018a2f4a31bc"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderLowOneInverse.lean",
+        "sha256": "75e594d8f2c767803cc7048019736c4d6e30c50256e1838a87d25245d4790809"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderLowZero.lean",
+        "sha256": "73c93329d8340243563629458ddc8ad08d0f36cf6c9c9c6decbc7794a5d49c88"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderObstruction.lean",
+        "sha256": "001e356dd2408d7f8bd0b800ffddb1122ddaf134c9fa69dbcc917ed74e3b3e5d"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderPrimitiveComparison.lean",
+        "sha256": "f7564d9bed7979e3767ff8d28733e2b2f6973a35d2837990e5f9bbcc8c7a9133"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderRestriction.lean",
+        "sha256": "86ff23b62699a3a1f171bf3c3a6344c7d2ceefbc65c255a690c210d80f7bf8a7"
+      },
+      {
+        "path": "WeightedObstructionNorms/OrderRestrictionNorm.lean",
+        "sha256": "ded55d18f054dc1e477c0ac94bd91d8640247d4447dda22d594d2dd1005e2af8"
+      },
+      {
+        "path": "WeightedObstructionNorms/PrismEvaluation.lean",
+        "sha256": "09b97bf5bad612ac5a46578f60f6ca93beb47f67d0146c93c11a30795b1d0740"
+      },
+      {
+        "path": "WeightedObstructionNorms/QuotientNorm.lean",
+        "sha256": "de12719c4c11d3a55eabdbd0cc89db95f74cd7012d0a7bce4c167aa448d01c30"
+      },
+      {
+        "path": "WeightedObstructionNorms/Reciprocal.lean",
+        "sha256": "c917e7069adbfcc7097b295d51a9f3edb0f00c0247df1ac5eb24bd7b5d6332b0"
+      },
+      {
+        "path": "WeightedObstructionNorms/RelativeCohomology.lean",
+        "sha256": "fedcc25b0d4bf9957a32710093781e91a99053548a3fd4bb2ee3f6eb85819487"
+      },
+      {
+        "path": "WeightedObstructionNorms/RelativeWindow.lean",
+        "sha256": "b76511e81ccead9be98b39f8d6e34b641491f75cb9d5ab2e3c729e5ec79af89b"
+      },
+      {
+        "path": "WeightedObstructionNorms/SimplexContraction.lean",
+        "sha256": "3bffbcd63170a6892648426ba72b04e1327913bbdd431005c341ad19ec64f12d"
+      },
+      {
+        "path": "WeightedObstructionNorms/SlicePolytope.lean",
+        "sha256": "efa9e617e18bf95da60d43b9cdac348279327c87ef0968da608401fa400ff2c0"
+      },
+      {
+        "path": "WeightedObstructionNorms/SmallObservationLists.lean",
+        "sha256": "95042b4c56040af17f1f3a35cb073953bf0cdc6fdb80f4e6ef617290cce294dd"
+      },
+      {
+        "path": "WeightedObstructionNorms/TriangleCocycle.lean",
+        "sha256": "4dc79014bf58bcd47b6c08df270172e6eb3d82f53207619ae6d275ff304d5aff"
+      },
+      {
+        "path": "WeightedObstructionNorms/TriangleCoordinates.lean",
+        "sha256": "f7a843cdb4423b7aadd48269376b129ee06f6fe4d33f106057a438b93def47c8"
+      },
+      {
+        "path": "WeightedObstructionNorms/TriangleCost.lean",
+        "sha256": "ba3ad7d473908e25842927a1ea461394bc143629780a51efe490dd57b87dca7f"
+      },
+      {
+        "path": "WeightedObstructionNorms/TriangleNorm.lean",
+        "sha256": "420fd2a8821ae47f08cdf30b742b2133149e8879f7813f3c66fcd73971dd0aa9"
+      },
+      {
+        "path": "WeightedObstructionNorms/TriangleSetup.lean",
+        "sha256": "bfbf7aba10b57c3dbe580086248dde86624281c5e59caf37258dfdf124b0316e"
+      },
+      {
+        "path": "WeightedObstructionNorms/WeightedNorm.lean",
+        "sha256": "0f9b53df3c6d858a5aa63282854bdbd1777ed7a82ba61826e0b3fbe942275ca1"
+      },
+      {
+        "path": "WeightedObstructionNorms/WindowMap.lean",
+        "sha256": "63a6cd379e35ef3ad855e10b9275aa762d9f97929df1a5797f8cdba996fe467e"
+      },
+      {
+        "path": "WeightedObstructionNorms/ZeroObstruction.lean",
+        "sha256": "7b7173e5c9e8676071b970748a1641c3ebf8f8551d09e023e8af29494f4af86b"
+      },
+      {
+        "path": "paper/weighted_obstruction_norms_en.tex",
+        "sha256": "d3aca7257183ba0b4b8e6d32f3e6c769d862d63fd280d78444d988d6aa527db1"
+      },
+      {
+        "path": "audit/CheckAxioms.lean",
+        "sha256": "2df699e592f69143d48aed3e6e1485080a24285ee715fb61d05777b923ef5980"
+      }
+    ],
+    "bounds": {
+      "named_declarations": 640,
+      "coordinate_cardinality": "All finite types allowed by each Lean theorem; not restricted to a finite numerical sample",
+      "triangle_parameters": "All real ε with 0 < ε ≤ 1"
+    },
+    "non_claims": [
+      "Prose motivation, literature attribution, applications, and open future directions are not encoded as proved propositions.",
+      "The formalization uses the fixed Lean/mathlib versions recorded in verification.json and standard classical axioms; it does not claim an independently implemented foundational kernel or executable numerical optimizer."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "none",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-09-14T00:35:14.129788+00:00",
+    "runtime_seconds": 158.69734692573547,
+    "exit_status": 0
+  },
+  "outputs": [
+    {
+      "path": "WeightedObstructionNorms.lean",
+      "sha256": "71be85cda58eed594bfe5b73f9401e41a18cf85585acd90e010a603dd14b009e"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "25e5ae140a196d0589d0e387f20e6399a0454dc861d75408b2192e6f881f49d0"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "b37c2d93aee81a3ac3adb6011c6dabd80ed0d1776fcf80b0ef04cd3492add6e1"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "README_ja.md",
+      "sha256": "e3a59086bae8e5a9917a00a7d028d065b8c4c89a2202d6cbe4b3a4afbe4828eb"
+    },
+    {
+      "path": "FORMALIZATION_STATUS.md",
+      "sha256": "d91cbe44b37236dad01fc7b0b183c9e848223255de9f40633dd7bc2b3b228982"
+    },
+    {
+      "path": "WeightedObstructionNorms/AlgebraicComplex.lean",
+      "sha256": "d7f656d9c8efcb96c65d6d0a018079ea38e645ba9cd098f73f4de63f9f662dfe"
+    },
+    {
+      "path": "WeightedObstructionNorms/AlternatingCancellation.lean",
+      "sha256": "e1bff0147431f1a2f34bb8c90e5d92a208eeedb255bd8f61e12fab921594c7fa"
+    },
+    {
+      "path": "WeightedObstructionNorms/AlternatingEvaluation.lean",
+      "sha256": "e32c3bb58474ef16724968fa8102866db98aeda5ec87a81629295182eaa1a2f4"
+    },
+    {
+      "path": "WeightedObstructionNorms/BinaryExamples.lean",
+      "sha256": "c4b5ce80cb57a694dd132c971dd13d09974e34ceacbf4dbf6c0aa211014abc6a"
+    },
+    {
+      "path": "WeightedObstructionNorms/BinaryMarginals.lean",
+      "sha256": "fb6301d3052e041306a168b4afefb39933bc26f0d54c5b1d467a4cc4c6b00f81"
+    },
+    {
+      "path": "WeightedObstructionNorms/BinaryPairCoordinates.lean",
+      "sha256": "42edc0fc7a2459c74331eee673628c238d33d3601fecfc699b54243de7d01f42"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechAllDegrees.lean",
+      "sha256": "5e665673c1ce0cb18b55a25abb743a925f77f7c3a9970fd99c4fcfc4edd97b04"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechAugmentationExtension.lean",
+      "sha256": "423f596c2983c07cc8a37833cd0febb6cf6bdfce09e4a1748498817a8be35d76"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechAugmentationNorm.lean",
+      "sha256": "e6efe38892ba44bf856bd56741b210493c7e6df37288cf00361c2a9fcb77b13a"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechCoordinateNorm.lean",
+      "sha256": "5e38724f5a8c50e83bcd46533409266191ce26eb01ae4105c0a1686beeebea1c"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechLowComparison.lean",
+      "sha256": "bc4e3bd12a1cb692a41a715963682e3fff18c3980be16c438c3a4aa24ccf15e3"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechLowDegrees.lean",
+      "sha256": "39fc57bb90d600c32c006c5367187002086d339d0a15f6af065c3ebdafa9d5c5"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechObstruction.lean",
+      "sha256": "6f440d5ef8869fbd75a1dc88f3c2a73ff68dcd028138bcb29417f7942c18d2c5"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechPolytope.lean",
+      "sha256": "92777a91fd82457e790539ee2a4cb55bf9766feca9d9de02b2f1b9eaada85a99"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechPrimitive.lean",
+      "sha256": "f3eaf8576347eb2468044ed92300b0f5f03eef78cf13288ab012bb5b21c54867"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechReciprocal.lean",
+      "sha256": "98b59d968f8b3e3c82d143653ea6015e16e7aa8ebfff2ac5efb88acbbe2251fc"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechRelative.lean",
+      "sha256": "57b286fd51d50bdadb046ed226eb62eafa67dcef85c3d1328f1a2a7dae7e56a5"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechRelativeIsometry.lean",
+      "sha256": "036d52eb44f93789944bedd857b214af8fa0ccdbdffb1fd1b6aeda44a34630de"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechSplitting.lean",
+      "sha256": "6b7186d54775cd16bd7f595de1d566ad0e4bbe3f1ba0fb82fb8815adb9aed616"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechSupportNorm.lean",
+      "sha256": "269ff63e1d7d763038205e956f43b2def3f1773c0e6d5ad67306be55d2b0504c"
+    },
+    {
+      "path": "WeightedObstructionNorms/CechWeights.lean",
+      "sha256": "f9a4998b0591bdec4119c00d1dbeecc79d2d7636d8473a851aebb42a192cfc5e"
+    },
+    {
+      "path": "WeightedObstructionNorms/CommonScale.lean",
+      "sha256": "798b863fa6154ec8b7f163ad6cd5ad27a266046161f0ce31ed170f17d6edc28f"
+    },
+    {
+      "path": "WeightedObstructionNorms/Comparison.lean",
+      "sha256": "15a002752f9b5a766c366114f9b3bfb5f8e1c6f54a82b0221053ed35001d721b"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalCocycle.lean",
+      "sha256": "c0e73a99e98beed3a8d7229a8f5d470ef288bc541c0552cbdf1bbc24d0c78852"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalCohomology.lean",
+      "sha256": "2306b022cb3da4eb49f3b0b8e1e6753f3ddde8f3257a50abddcb6532787817ea"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalConnecting.lean",
+      "sha256": "9a50118f39879b3e413989290e2f584f51390fc442d878616f9a3f0b910c1382"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalCoordinates.lean",
+      "sha256": "dd95a185831ed414cca4818e0307d4cf746a5a3dae33d2ccf2b5373bc791b800"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalCost.lean",
+      "sha256": "4b29d1f2d8b319fe1ba73adc5a82b5dcf7dfea847767f7b19291a417b4f9d695"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalNorm.lean",
+      "sha256": "0f3a51de8f11fdeb01bbf14130273c218c083a6901f98c199a5445a1e84b84c8"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalRelativeCoordinates.lean",
+      "sha256": "6316d5f217d2330b00fbb29c432815ed840fb9c6152092a443138bfdf054479d"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalSetup.lean",
+      "sha256": "d15ab14bfcea7aae3d9b3576dc3559194e8226464aa9106b856ace8dbf2bbb44"
+    },
+    {
+      "path": "WeightedObstructionNorms/DiagonalSpanning.lean",
+      "sha256": "4047326b5df8a509e71101d03c99436e4cf8b30481fc090edcd72e0348bc8781"
+    },
+    {
+      "path": "WeightedObstructionNorms/Duality.lean",
+      "sha256": "ff6b951800341018a246078a928b320fcb50509531cbd02b81b5529d1c72b0f3"
+    },
+    {
+      "path": "WeightedObstructionNorms/FiniteNormedCategory.lean",
+      "sha256": "f0d91acc8237dd597488c0e67a5137179fcaa01173be2632ae25df9d68d60a72"
+    },
+    {
+      "path": "WeightedObstructionNorms/FiniteObservations.lean",
+      "sha256": "2832950cc70a1b0c7ccf127e4be4576c4e93444cb55248473c4fe53401d620a5"
+    },
+    {
+      "path": "WeightedObstructionNorms/FullSupportAcyclicity.lean",
+      "sha256": "e09e6e4633e727af1b8ca03e323a391f8be474e356e5c1e45904059ff95a9e1d"
+    },
+    {
+      "path": "WeightedObstructionNorms/InteractionCoordinates.lean",
+      "sha256": "91488fdeb25bc24ad4f5804c0ae5314bad9b466f999a77454f05f3bbbf5839ec"
+    },
+    {
+      "path": "WeightedObstructionNorms/LinearProblem.lean",
+      "sha256": "673650dd7e5d16deb2cd9813bd0d58a498bd02424d7bd579b17c8e1d4155f5b5"
+    },
+    {
+      "path": "WeightedObstructionNorms/ListPrism.lean",
+      "sha256": "775835ad865ab8f0a4d246b3955ae3da50849be4968795822d8db4aabc913a94"
+    },
+    {
+      "path": "WeightedObstructionNorms/Marginal.lean",
+      "sha256": "7cab554db69dfcf0fc45dcbd1ac86b5e752bad5e3689d51809a3c0f1ff30eeb3"
+    },
+    {
+      "path": "WeightedObstructionNorms/Minimum.lean",
+      "sha256": "2605f6c3b1b4fdc07e568a26438dd929a8bab841e46a77468413b61358503f51"
+    },
+    {
+      "path": "WeightedObstructionNorms/NormedCohomology.lean",
+      "sha256": "62234d62d8a0ce55b776c9d9d3ffb81fa40a94a4c478c048c3412cfc15ce349a"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationAugmentation.lean",
+      "sha256": "6490271c2c5d56c6a503e692d738a749f25e66472f840eb4f76bb96a2307e3ee"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationFunctor.lean",
+      "sha256": "6389b5788543d2b94ad8707841f643011346d4db9aca257278d025d48c344a7c"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationHomotopy.lean",
+      "sha256": "c4bfa312688f1c0c88216ffbd8f315841dd6f140c288d4e1a8ab6ab6273b8ab8"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationListInvariance.lean",
+      "sha256": "5cf01f7c78cd4fa1b6c1fbc466c6cbb662cf4380f96317ba5e408b9e3246829f"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationRestriction.lean",
+      "sha256": "094947245e04b781afd2c5cbc3f8831b288cb0140acbd615a6f9789d545266cd"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationRestriction0.lean",
+      "sha256": "a9560df4d47333c057b9a5406e861bbb63f89130f289c8428d12c6ed75a0a4dd"
+    },
+    {
+      "path": "WeightedObstructionNorms/ObservationRestrictionNorm.lean",
+      "sha256": "ef70d622ddcebdcbeb8285f4d6fd703a1f742bae2a0c384982848fc2398bee44"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderComparison.lean",
+      "sha256": "739a2c1ebe3735b78a368069502b5737a56f32608ec97d8e787c368dd5c592d8"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderComplex.lean",
+      "sha256": "a4496d4398ef61e1c7651de22ef319afa3ef5a89d1db0d40362e40a407add51f"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderLowIsometry.lean",
+      "sha256": "74c25f49b2a999a76c6846c9cd68d9dac9cdf073e75457112c7113ee5c457cd2"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderLowOneInjective.lean",
+      "sha256": "86bd99448c799e95ae3f838bb685465995a937ba456cf6f791bf018a2f4a31bc"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderLowOneInverse.lean",
+      "sha256": "75e594d8f2c767803cc7048019736c4d6e30c50256e1838a87d25245d4790809"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderLowZero.lean",
+      "sha256": "73c93329d8340243563629458ddc8ad08d0f36cf6c9c9c6decbc7794a5d49c88"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderObstruction.lean",
+      "sha256": "001e356dd2408d7f8bd0b800ffddb1122ddaf134c9fa69dbcc917ed74e3b3e5d"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderPrimitiveComparison.lean",
+      "sha256": "f7564d9bed7979e3767ff8d28733e2b2f6973a35d2837990e5f9bbcc8c7a9133"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderRestriction.lean",
+      "sha256": "86ff23b62699a3a1f171bf3c3a6344c7d2ceefbc65c255a690c210d80f7bf8a7"
+    },
+    {
+      "path": "WeightedObstructionNorms/OrderRestrictionNorm.lean",
+      "sha256": "ded55d18f054dc1e477c0ac94bd91d8640247d4447dda22d594d2dd1005e2af8"
+    },
+    {
+      "path": "WeightedObstructionNorms/PrismEvaluation.lean",
+      "sha256": "09b97bf5bad612ac5a46578f60f6ca93beb47f67d0146c93c11a30795b1d0740"
+    },
+    {
+      "path": "WeightedObstructionNorms/QuotientNorm.lean",
+      "sha256": "de12719c4c11d3a55eabdbd0cc89db95f74cd7012d0a7bce4c167aa448d01c30"
+    },
+    {
+      "path": "WeightedObstructionNorms/Reciprocal.lean",
+      "sha256": "c917e7069adbfcc7097b295d51a9f3edb0f00c0247df1ac5eb24bd7b5d6332b0"
+    },
+    {
+      "path": "WeightedObstructionNorms/RelativeCohomology.lean",
+      "sha256": "fedcc25b0d4bf9957a32710093781e91a99053548a3fd4bb2ee3f6eb85819487"
+    },
+    {
+      "path": "WeightedObstructionNorms/RelativeWindow.lean",
+      "sha256": "b76511e81ccead9be98b39f8d6e34b641491f75cb9d5ab2e3c729e5ec79af89b"
+    },
+    {
+      "path": "WeightedObstructionNorms/SimplexContraction.lean",
+      "sha256": "3bffbcd63170a6892648426ba72b04e1327913bbdd431005c341ad19ec64f12d"
+    },
+    {
+      "path": "WeightedObstructionNorms/SlicePolytope.lean",
+      "sha256": "efa9e617e18bf95da60d43b9cdac348279327c87ef0968da608401fa400ff2c0"
+    },
+    {
+      "path": "WeightedObstructionNorms/SmallObservationLists.lean",
+      "sha256": "95042b4c56040af17f1f3a35cb073953bf0cdc6fdb80f4e6ef617290cce294dd"
+    },
+    {
+      "path": "WeightedObstructionNorms/TriangleCocycle.lean",
+      "sha256": "4dc79014bf58bcd47b6c08df270172e6eb3d82f53207619ae6d275ff304d5aff"
+    },
+    {
+      "path": "WeightedObstructionNorms/TriangleCoordinates.lean",
+      "sha256": "f7a843cdb4423b7aadd48269376b129ee06f6fe4d33f106057a438b93def47c8"
+    },
+    {
+      "path": "WeightedObstructionNorms/TriangleCost.lean",
+      "sha256": "ba3ad7d473908e25842927a1ea461394bc143629780a51efe490dd57b87dca7f"
+    },
+    {
+      "path": "WeightedObstructionNorms/TriangleNorm.lean",
+      "sha256": "420fd2a8821ae47f08cdf30b742b2133149e8879f7813f3c66fcd73971dd0aa9"
+    },
+    {
+      "path": "WeightedObstructionNorms/TriangleSetup.lean",
+      "sha256": "bfbf7aba10b57c3dbe580086248dde86624281c5e59caf37258dfdf124b0316e"
+    },
+    {
+      "path": "WeightedObstructionNorms/WeightedNorm.lean",
+      "sha256": "0f9b53df3c6d858a5aa63282854bdbd1777ed7a82ba61826e0b3fbe942275ca1"
+    },
+    {
+      "path": "WeightedObstructionNorms/WindowMap.lean",
+      "sha256": "63a6cd379e35ef3ad855e10b9275aa762d9f97929df1a5797f8cdba996fe467e"
+    },
+    {
+      "path": "WeightedObstructionNorms/ZeroObstruction.lean",
+      "sha256": "7b7173e5c9e8676071b970748a1641c3ebf8f8551d09e023e8af29494f4af86b"
+    },
+    {
+      "path": "scripts/package.py",
+      "sha256": "c38d6f9b574dd6121d0c380d10534550382321510e1b912a91fcc0a4d685ac2e"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "b5e00900be2aedb7115c6b37ea7e9b6e4e589b0bb2b45362123945a5f8e1e416"
+    },
+    {
+      "path": "paper/weighted_obstruction_norms_en.tex",
+      "sha256": "d3aca7257183ba0b4b8e6d32f3e6c769d862d63fd280d78444d988d6aa527db1"
+    },
+    {
+      "path": "audit/paper_coverage.json",
+      "sha256": "93763f3899e2264885f5461acb78f5deab39503e9a5a11408530f34740bd6ec7"
+    },
+    {
+      "path": "audit/CheckAxioms.lean",
+      "sha256": "2df699e592f69143d48aed3e6e1485080a24285ee715fb61d05777b923ef5980"
+    },
+    {
+      "path": "audit/axioms.log",
+      "sha256": "3b70899e6bd3ebe27c8af2ac1d4c593c7cc846cff067ebcc4839b90d9d0f5ef7"
+    },
+    {
+      "path": "audit/build.log",
+      "sha256": "f6ce88d08a278a6e4776f40c48dd864a211c8e66f0b48c6d9d615e93216b4e75"
+    },
+    {
+      "path": "audit/verification.json",
+      "sha256": "ee50a629b6550b32614963763b19d03d8778b1da9c2544680877c740ddedf3bc"
+    },
+    {
+      "path": "audit/environment.md",
+      "sha256": "5db3758d1c81614a352655953d4c843e8c778a079cc4640803dd9644b95dbbb2"
+    },
+    {
+      "path": "audit/lean_proc_compat.c",
+      "sha256": "c64ba8b377b1e5892b4d69cb1240507abd1c35199869d9986cfb5ceafdbea802"
+    },
+    {
+      "path": "audit/mathlib-lake-manifest.json",
+      "sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752"
+    },
+    {
+      "path": "audit/history/verification_v1.json",
+      "sha256": "d0240763b38f212cec37e1d97741dff67e8eeb45f31778e529afdce3f83417b2"
+    },
+    {
+      "path": "audit/history/verification_v10.json",
+      "sha256": "754d652f70706eb5f2f64a03c77b4710fcc3dc1a029599e22b070c33242c0b18"
+    },
+    {
+      "path": "audit/history/verification_v11.json",
+      "sha256": "53ecc85f4f5a7a1a4f30c23ee72661911ddb8b967a324917285226faea6f7d68"
+    },
+    {
+      "path": "audit/history/verification_v12.json",
+      "sha256": "ee50a629b6550b32614963763b19d03d8778b1da9c2544680877c740ddedf3bc"
+    },
+    {
+      "path": "audit/history/verification_v2.json",
+      "sha256": "991e81080cb6b0a9248436a0c1ee23252b1c394dacf1cbc8d31ac21912d1b551"
+    },
+    {
+      "path": "audit/history/verification_v3.json",
+      "sha256": "ab06ab983f61c8636c08af4ac3e53f20d0463ac0644c040138b8f8928b886962"
+    },
+    {
+      "path": "audit/history/verification_v4.json",
+      "sha256": "e8abd02770c800696d779beeababddff00b933b0d09f8fa6539d9fc427229f6b"
+    },
+    {
+      "path": "audit/history/verification_v5.json",
+      "sha256": "f724eab8520d0c5b7149fcb004314a64f903e3bc1f2b9d645a2d278362401249"
+    },
+    {
+      "path": "audit/history/verification_v6.json",
+      "sha256": "5d2f25f74779b3fdae59e1434edc7d4fff03e1cc5c3a00222bce79a90efbf993"
+    },
+    {
+      "path": "audit/history/verification_v7.json",
+      "sha256": "f66bb7b4ebbeb5c9b901d69ae161056ec1a93eedef08ff4f554189ec0a31a2f6"
+    },
+    {
+      "path": "audit/history/verification_v8.json",
+      "sha256": "1b0ca3e0c4c91e9ef8c36de67c1c84afe61cd33fd7b797010faf7d136822fe05"
+    },
+    {
+      "path": "audit/history/verification_v9.json",
+      "sha256": "f9b910833a6dd94e2059c3775e9c56c940ffa2684f7657f17db0596791ccc261"
+    },
+    {
+      "path": "REVISION_10.md",
+      "sha256": "2dc2942c69225b3e69805410174d779776eef2a0a7376fcd7e54b09ba6587f60"
+    },
+    {
+      "path": "REVISION_11.md",
+      "sha256": "23ca133e68c82ae251e8c0a81656736953b50101bc15fa937e100bf8a5afeb7c"
+    },
+    {
+      "path": "REVISION_12.md",
+      "sha256": "f8ebec0a8986ed3aafa224fd5005a8310c2153de6351a31c7b50cb7637ba483d"
+    },
+    {
+      "path": "REVISION_2.md",
+      "sha256": "133f88823c89c17a668b17b0073afaf6325efa97901b7ede87503c1e94f4eb9e"
+    },
+    {
+      "path": "REVISION_3.md",
+      "sha256": "defa91ca6216a1a90c877e942a83d56bcc38a82640fe0ac31b98a2b505215f24"
+    },
+    {
+      "path": "REVISION_4.md",
+      "sha256": "8042d0b7f43cfd6c1586c09e14f8c47b305caab1b3b1f2e0c925643f5d10a702"
+    },
+    {
+      "path": "REVISION_5.md",
+      "sha256": "7dd1831a9dc74e03e40f3e656884dadbb4f659977617c6ea1f8fbac77e40a594"
+    },
+    {
+      "path": "REVISION_6.md",
+      "sha256": "4379844a62232169669a66102a0293b35db1380cfe2eeab1fdd6c1bd3e61f0e3"
+    },
+    {
+      "path": "REVISION_7.md",
+      "sha256": "de01684f9729d7c85109be0d96c320bb085912524aa9cd98f13bcfefa2adfba5"
+    },
+    {
+      "path": "REVISION_8.md",
+      "sha256": "a3e3798e40aff917558a0964cf3d97c5fd29a98247835bb8823a6646d47db1f0"
+    },
+    {
+      "path": "REVISION_9.md",
+      "sha256": "5b9dfe6545746c3140aee2234d5b80344847f2c4e677b1a1df97abf1f1182922"
+    }
+  ],
+  "checks": [
+    "lake build succeeded",
+    "Axiom audit covers all 640 named theorem/lemma declarations",
+    "No sorry, admit, custom axiom, unsafe, or native_decide in implementation",
+    "Transitive axiom dependencies restricted to propext, Classical.choice, Quot.sound",
+    "Packaged proof source hashes match the final verification record"
+  ],
+  "result": "Kernel-checked completed mathematical formalization of all fourteen numbered results, including Appendix A.1 and both actual binary Cech examples. The diagonal dimension and relative connecting kernel are now linked to the general frontend. See paper_coverage.json and verification.json for exact scope and evidence.",
+  "residual_risks": [
+    "The source-to-manuscript correspondence is documented in paper_coverage.json and FORMALIZATION_STATUS.md; kernel checking validates the stated Lean propositions.",
+    "The documented runtime compatibility helper affects only executable-path discovery; ordinary-environment rechecking is available through the pinned toolchain."
+  ]
+}

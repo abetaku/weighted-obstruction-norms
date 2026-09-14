@@ -1,0 +1,508 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=28mm]{geometry}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\hypersetup{pdftitle={Weighted Obstruction Norms for Finite Marginal Complexes},pdfauthor={Takuya Abe},pdfkeywords={marginal distributions, relative cohomology, Cech complexes, support degeneration, quotient norms}}
+\setlist{itemsep=2pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\renewcommand{\proofname}{\textbf{Proof}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\M}{\mathcal M}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\DeclareMathOperator{\conv}{conv}
+\title{Weighted Obstruction Norms\texorpdfstring{\\}{ }for Finite Marginal Complexes}
+\author{Takuya Abe}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study an augmented \v{C}ech complex of local signed measures associated with a finite family of observations and a prescribed support. For a fixed nonzero cohomological obstruction, the minimum weighted norm of a primitive under an affine probability mixture is exactly proportional to the reciprocal of the mixture parameter, for all sufficiently small positive parameters. The coefficient defines a norm on the obstruction space. Its unit ball is the image, under the connecting homomorphism of a relative complex, of a weighted coordinate box intersected with the relative cocycle space. This norm is independent of the generating observation list and is nonincreasing under support enlargement and observation restriction. We also establish isometric comparison with the order-complex presentation in degrees zero and one. Binary examples give explicit obstruction balls and sharp minimum correction norms. For nonaffine weights with a common vanishing scale, the same quotient coefficient determines the rescaled limit; exact proportionality of the vanishing weights yields an eventual equality.
+\end{abstract}
+\noindent\textbf{Keywords.} Marginal distributions; relative cohomology; \v{C}ech complexes; support degeneration; quotient norms.
+
+\section{Introduction}
+Local consistency and bounded realizability impose different requirements on a family of partial observations. A system of marginal equations may admit a signed solution while every solution exceeds a prescribed pointwise bound. This distinction becomes particularly pronounced near a support boundary: states that have probability zero can carry a linear obstruction, whereas assigning them small positive probabilities can restore solvability at the cost of large solution norms.
+
+The marginal extension problem has established algebraic and cohomological formulations. Bennequin, Peltre, Sergeant-Perthuis, and Vigneaux study interaction decompositions, marginal problems, and comparison between \v{C}ech and nerve constructions \cite[Sections~5--6]{BPSV}. Quantitative consistency is also studied in Robinson's theory of assignments to sheaves of pseudometric spaces \cite[Definitions~7 and~9]{Robinson}. The quantity considered here is a minimum norm of a primitive of a prescribed cocycle, rather than the consistency radius of a given assignment.
+
+In a finite measurement scenario, joint outcome distributions are specified for sets of measurements that can be performed together. Agreement on common measurements is a local consistency condition. In the framework of Abramsky and Brandenburger, this condition gives a global signed extension, although a nonnegative global extension need not exist \cite[Theorems~5.5 and~5.9]{AB}. This distinction explains why linear compatibility alone does not settle probabilistic realizability. Our problem adds a prescribed support and a bound relative to a reference law. The symmetric bound used here allows signed measures and is distinct from nonnegativity; the resulting norm is not identified with a contextuality measure.
+
+A related interpretation arises from local-density descriptions, where marginalization expresses consistency \cite[Definition~7]{Peltre}. For a local signed measure $x_A$ and a positive reference marginal $q_A$, writing $x_A=q_A m_A$ makes $|x_A|\le Lq_A$ equivalent to the amplitude bound $|m_A|\le L$. In degree zero, the global density determines conditional means; in degree one, a primitive corrects a prescribed marginal inconsistency. A rare state can carry the required signed correction only through a large density relative to its reference probability. The minimum primitive norm therefore distinguishes the existence of a linear extension or correction from its realization within a fixed amplitude bound. Section~\ref{subsec:triangle} exhibits this distinction by an exact threshold.
+
+Minimum norms of primitives are instances of quotient norms. For example, the Gersten boundary norm minimizes the $\ell^1$ norm of a chain with prescribed boundary \cite[Definition~2.53 and Remark~2.54]{Calegari}. Here the primitive norm is a probability-weighted $\ell^\infty$ norm, and the limiting quotient is taken through a relative connecting homomorphism. It is not defined by minimizing the norm of representatives in the original cocycle degree.
+
+We retain both the support of the joint state space and the probability weights on local coordinates. The support determines an augmented complex and its cohomology. A full-support reference law supplies a norm that measures the cost of resolving an obstruction through coordinates absent from the original support. These two structures are linked by an elementary finite-dimensional minimization argument.
+
+The main results are the exact reciprocal law in Theorem~\ref{thm:reciprocal}, the relative unit-ball formula in Theorem~\ref{thm:relative}, and the nonexpansive comparison in Theorem~\ref{thm:restriction}. The relative description identifies the obstruction norm with a quotient norm induced by the connecting homomorphism. It also distinguishes degree zero, where the image of the global degree-minus-one cohomology must be factored out, from positive degrees, where the connecting homomorphism is an isomorphism. The resulting norm depends only on the generated observation family, the support, and the reference law. Proposition~\ref{prop:common-scale} extends the limiting coefficient to nonaffine weights with a common vanishing scale.
+
+The complexes, connecting homomorphisms, refinement homotopies, and quotient-norm principle used here are standard. The contribution of this paper is their joint application to finite marginal complexes with prescribed support and probability weights: the exact boundary coefficient has a relative unit-ball description compatible with both support enlargement and observation restriction. All spaces are finite-dimensional over~$\R$. In degree zero the primitive problem describes extension of conditional predictions; in degree one it describes correction of prescribed local inconsistency. Higher-degree primitives are treated as cochains.
+
+\section{Finite marginal complexes}\label{sec:complex}
+Let $I=\{1,\ldots,d\}$, let each $E_i$ be a finite nonempty set, and put $E=\prod_{i\in I}E_i$. A support is a nonempty subset $S\subseteq E$. For $A\subseteq I$, write $E_A=\prod_{i\in A}E_i$, let $S_A$ be the projection of $S$ onto $E_A$, and set $W_A(S)=\R^{S_A}$. We interpret these vectors as signed measures. The empty observation has one state, so $W_\varnothing(S)=\R$.
+
+For $A\subseteq B$, marginalization is the map
+\begin{equation}\label{eq:marginal}
+ (L_{A\leftarrow B}x)(a)=\sum_{\substack{b\in S_B\\b|_A=a}}x(b).
+\end{equation}
+These maps compose transitively. Fix a finite nonempty ordered list $\M=(M_i)_{i\in K}$ of subsets of $I$, where $K=\{0,\ldots,r-1\}$. Repetitions and nonmaximal observations are allowed. Its generated downward-closed family is
+\[
+ \langle\M\rangle=\OO=\bigcup_{i\in K}2^{M_i}.
+\]
+For nonempty $J\subseteq K$, put $M_J=\bigcap_{i\in J}M_i$.
+
+The augmented alternating \v{C}ech complex is
+\begin{equation}\label{eq:complex}
+ C_S^{-1}(\M)=\R^S,\qquad
+ C_S^n(\M)=\prod_{i_0<\cdots<i_n}W_{M_{\{i_0,\ldots,i_n\}}}(S)\quad(n\ge0).
+\end{equation}
+Degrees below $-1$ are zero. All intersections contribute, including the empty observation. For $J=(i_0<\cdots<i_{n+1})$, the differential is
+\begin{equation}\label{eq:delta}
+ (\delta x)_J=\sum_{k=0}^{n+1}(-1)^k
+ L_{M_J\leftarrow M_{J\setminus\{i_k\}}}x_{J\setminus\{i_k\}}.
+\end{equation}
+In degree $-1$, it is the family of marginal maps to the $M_i$. Transitivity and cancellation of paired faces give $\delta^2=0$. We write $Z^p(C)=\ker\delta^p$ and $H^p(C)=Z^p(C)/\im\delta^{p-1}$. Extension by zero along $S\subseteq T$ commutes with marginalization and defines an injective cochain map $j_{S,T}:C_S\to C_T$.
+
+\begin{lemma}\label{lem:acyclic}
+For every observation list, $H^p(C_E)=0$ for all $p\ge0$.
+\end{lemma}
+\begin{proof}
+Choose $e_i\in\R^{E_i}$ of total mass one and let $V_i$ be the kernel of the total-mass map. For each $A$, the decomposition $\R^{E_i}=\R e_i\oplus V_i$ gives a direct-sum decomposition of $\R^{E_A}$ into components indexed by $B\subseteq A$, each identified with $U_B=\bigotimes_{i\in B}V_i$; factors outside $B$ are $e_i$. Set $U_\varnothing=\R$. Marginalization is the identity on the $U_B$ component if it retains $B$, and is zero on that component otherwise.
+
+The complex therefore splits over $B\subseteq I$. The local terms of the $B$ component are indexed by the nonempty subsets of $K_B=\{i:B\subseteq M_i\}$. If $K_B\ne\varnothing$, the component, including degree $-1$, is the augmented cochain complex of a simplex with constant coefficients $U_B$. Fixing a vertex $k\in K_B$ and inserting $k$ at the beginning defines a contraction: alternating extension, with repeated indices assigned zero, gives $\delta h+h\delta=\id$. The term deleting $k$ is the identity and all other terms cancel in pairs. If $K_B=\varnothing$, only degree $-1$ remains. In either case there is no cohomology in nonnegative degrees.
+\end{proof}
+The decomposition in this proof is a decomposition of signed-measure spaces; it places no independence assumption on a probability law.
+
+For a strictly positive law $q$ on $E$, define
+\begin{equation}\label{eq:weighted}
+ \norm{x}_{q,n}=\max_{|J|=n+1}\max_{a\in E_{M_J}}
+ \frac{|x_J(a)|}{q_{M_J}(a)}\quad(n\ge0),\qquad
+ \norm{x}_{q,-1}=\max_{z\in E}\frac{|x(z)|}{q(z)}.
+\end{equation}
+The norm on a zero-dimensional cochain space is zero. Writing $x_A=q_A m_A$ identifies the weighted norm with the maximum absolute value of the functions $m_A$. In particular,
+\[
+ L_{A\leftarrow I}(qm)=q_A\mathbb E_q[m\mid Z_A]
+\]
+explains the conditional-prediction interpretation in degree zero, where $Z_A$ is the coordinate projection.
+
+\section{An exact reciprocal law}\label{sec:reciprocal}
+We first isolate the finite-dimensional minimization argument. Let $J=J_0\sqcup J_1$ be finite, let $A:\R^J\to B$ be linear with $B$ finite-dimensional, and denote its coordinate restrictions by $A_0,A_1$. Assume
+\begin{equation}\label{eq:weights}
+ w_j(\varepsilon)=
+ \begin{cases}
+ w_j^0+\varepsilon r_j,&j\in J_0,\quad w_j^0>0,\\
+ \varepsilon r_j,&j\in J_1,\quad r_j>0,
+ \end{cases}
+\end{equation}
+and that all weights are positive for the parameters under consideration. The coefficients $r_j$ on $J_0$ may be negative. For fixed $b\in\im A$, put
+\begin{equation}\label{eq:minimum}
+ \Gamma_\varepsilon(b)=\min_{Ax=b}\max_{j\in J}\frac{|x_j|}{w_j(\varepsilon)}.
+\end{equation}
+Empty maxima are zero. Let $\pi:B\to B/\im A_0$ be the quotient map and define
+\begin{equation}\label{eq:coefficient}
+ \kappa(b)=\min_{\pi A_1v=\pi b}\max_{j\in J_1}\frac{|v_j|}{r_j}.
+\end{equation}
+Both minima are attained: intersecting the feasible affine space with a sublevel set determined by any feasible point produces a nonempty compact set.
+
+\begin{theorem}\label{thm:reciprocal}
+One has $\kappa(b)>0$ if and only if $b\notin\im A_0$. If $\kappa(b)>0$, then
+\begin{equation}\label{eq:reciprocal}
+ \Gamma_\varepsilon(b)=\frac{\kappa(b)}{\varepsilon}
+\end{equation}
+for all sufficiently small positive $\varepsilon$. If $\kappa(b)=0$, then
+\begin{equation}\label{eq:zero-limit}
+ \lim_{\varepsilon\downarrow0}\Gamma_\varepsilon(b)
+ =\min_{A_0u=b}\max_{j\in J_0}\frac{|u_j|}{w_j^0}.
+\end{equation}
+Moreover, with $A_i^*$ denoting algebraic transposes,
+\begin{equation}\label{eq:dual}
+ \kappa(b)=\sup\left\{\langle a,b\rangle:a\in B^*,\ A_0^*a=0,
+ \ \sum_{j\in J_1}r_j|(A_1^*a)_j|\le1\right\}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Feasibility of \eqref{eq:coefficient} follows from $b\in\im A$. Attainment shows that its minimum is zero precisely when $\pi b=0$. Every solution $x=(x_0,x_1)$ of $Ax=b$ satisfies
+\[
+ \kappa(b)\le\max_{j\in J_1}|x_{1,j}|/r_j
+ \le\varepsilon\max_{j\in J}|x_j|/w_j(\varepsilon).
+\]
+This gives the lower bound in \eqref{eq:reciprocal}. Choose a minimizer $v$ in \eqref{eq:coefficient} and fix $u$ such that $A_0u=b-A_1v$. The vector $(u,v)$ is feasible for every parameter. Its $J_0$ weighted norm stays bounded near zero, whereas its $J_1$ weighted norm is $\kappa(b)/\varepsilon$. If $\kappa(b)>0$, the latter dominates for all sufficiently small parameters and the lower bound is attained.
+
+If $\kappa(b)=0$, a minimizing solution of $A_0u=b$, extended by zero, gives boundedness and the upper-limit inequality in \eqref{eq:zero-limit}. Along a sequence realizing the lower limit, choose minimizers $x^\varepsilon$. Their $J_0$ coordinates are bounded and their $J_1$ coordinates are $O(\varepsilon)$. A subsequential limit satisfies $A_0u=b$. Convergence of the positive $J_0$ weights then gives the reverse inequality.
+
+Finally, the compact symmetric convex set
+\[
+ K=\{\pi A_1v:|v_j|\le r_j\}
+\]
+has support function $\sum_j r_j|(A_1^*a)_j|$ on the dual of $B/\im A_0$, identified with $\ker A_0^*$. The gauge of $K$ on its linear span is \eqref{eq:coefficient}. The set $K$ contains a neighborhood of zero in $V=\im(\pi A_1)$, and $\pi b\in V$. Finite-dimensional separation gives the polar representation on $V$. Every functional on $V$ extends to $B/\im A_0$ without changing its values on $K$, which yields exactly \eqref{eq:dual}, even when $V$ is a proper subspace.
+\end{proof}
+
+Fix a law $q_0$ with support exactly $S$ and a strictly positive law $q_1$ on $E$, regarding $q_0$ as zero outside $S$. Set $q_\varepsilon=(1-\varepsilon)q_0+\varepsilon q_1$. For a fixed cocycle $c\in Z^p(C_S)$, $p\ge0$, write $j=j_{S,E}$ and put
+\begin{equation}\label{eq:primitive}
+ \Gamma_\varepsilon(c)=\min_{\delta x=jc}\norm{x}_{q_\varepsilon,p-1}.
+\end{equation}
+The feasible set is nonempty by Lemma~\ref{lem:acyclic}.
+
+\begin{corollary}\label{cor:obstruction}
+There is a norm $N^p_{S,\M,q_1}$ on $H^p(C_S)$ such that
+\begin{equation}\label{eq:norm-limit}
+ N^p_{S,\M,q_1}([c])=\lim_{\varepsilon\downarrow0}\varepsilon\Gamma_\varepsilon(c).
+\end{equation}
+If $[c]\ne0$, then $\Gamma_\varepsilon(c)=N^p_{S,\M,q_1}([c])/\varepsilon$ for all sufficiently small positive $\varepsilon$. The norm is independent of the positive weights of $q_0$ on $S$.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:reciprocal} to $A=\delta_E^{p-1}$ and $b=jc$. Partition the primitive coordinates into those in the corresponding projections of $S$ and those outside them. In degree $-1$, this is the partition $S\sqcup(E\setminus S)$. The first coordinate block has differential image $j\im\delta_S^{p-1}$; the second has weights exactly $\varepsilon$ times the corresponding $q_1$ marginals. Thus $\kappa(jc)$ vanishes exactly when $[c]=0$, and is unchanged by replacing $c$ by a cohomologous cocycle.
+
+More precisely, $H^p(C_S)$ embeds in $C_E^p/\im A_0$ by $[c]\mapsto[jc]$, and its image lies in $\im(\pi A_1)$. The restriction of the quotient norm \eqref{eq:coefficient} is therefore a norm on $H^p(C_S)$. Its defining weights use $q_1$ only. The positive and zero cases of Theorem~\ref{thm:reciprocal} give \eqref{eq:norm-limit} and the asserted equality.
+\end{proof}
+
+\begin{proposition}\label{prop:support}
+For $S\subseteq T$, fixed $\M,q_1$, and $p\ge0$,
+\begin{equation}\label{eq:support}
+ N^p_{T,\M,q_1}(j_{S,T*}\alpha)\le N^p_{S,\M,q_1}(\alpha).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The first coordinate block in \eqref{eq:coefficient} increases when $S$ is replaced by $T$. Split a feasible vector in the second block for $S$ into coordinates that remain outside $T$ and coordinates now contained in $T$. The differential of the latter lies in the first-block image for $T$, so the former satisfies the quotient equation for $T$. Its weighted maximum is no greater. Minimizing gives \eqref{eq:support}.
+\end{proof}
+The cocycle is fixed throughout these statements. For instance, replacing $c$ by $\varepsilon c$ cancels reciprocal divergence by homogeneity. The affine hypothesis can be relaxed as follows.
+
+\subsection{Nonaffine weights with a common vanishing scale}
+\begin{proposition}\label{prop:common-scale}
+Keep the finite coordinate partition $J=J_0\sqcup J_1$, the linear map $A$, and the fixed vector $b\in\im A$ from above. Replace \eqref{eq:weights} by positive weights satisfying
+\begin{equation}\label{eq:common-scale}
+ w_j(\varepsilon)\longrightarrow w_j^0>0\quad(j\in J_0),\qquad
+ \frac{w_j(\varepsilon)}{t(\varepsilon)}\longrightarrow r_j>0\quad(j\in J_1),
+\end{equation}
+where $t(\varepsilon)>0$ and $t(\varepsilon)\to0$ as $\varepsilon\downarrow0$. Define $\Gamma_\varepsilon(b)$ by \eqref{eq:minimum} and $\kappa(b)$ by \eqref{eq:coefficient}, using these $r_j$. Then
+\begin{equation}\label{eq:rescaled-limit}
+ \lim_{\varepsilon\downarrow0}t(\varepsilon)\Gamma_\varepsilon(b)=\kappa(b).
+\end{equation}
+If $\kappa(b)=0$, the unscaled limit is the minimum in \eqref{eq:zero-limit}. If $\kappa(b)>0$ and $w_j(\varepsilon)=t(\varepsilon)r_j$ for every $j\in J_1$ and all sufficiently small parameters, then
+\[
+ \Gamma_\varepsilon(b)=\kappa(b)/t(\varepsilon)
+\]
+for all sufficiently small positive $\varepsilon$.
+\end{proposition}
+\begin{proof}
+Put $t=t(\varepsilon)$ and
+\[
+ \eta_\varepsilon=\max_{j\in J_1}
+ \left|\frac{w_j(\varepsilon)}{t r_j}-1\right|,
+\]
+with the empty maximum equal to zero. Finiteness gives $\eta_\varepsilon\to0$. Every feasible $x=(x_0,x_1)$ satisfies
+\[
+ \kappa(b)\le\max_{j\in J_1}|x_{1,j}|/r_j
+ \le t(1+\eta_\varepsilon)\max_{j\in J}|x_j|/w_j(\varepsilon).
+\]
+Choose a minimizer $v$ in \eqref{eq:coefficient} and fix $u$ with $A_0u=b-A_1v$. Set $M_\varepsilon=\max_{j\in J_0}|u_j|/w_j(\varepsilon)$, which stays bounded. For $\eta_\varepsilon<1$, feasibility of $(u,v)$ gives
+\[
+ \frac{\kappa(b)}{1+\eta_\varepsilon}
+ \le t\Gamma_\varepsilon(b)
+ \le\max\left\{tM_\varepsilon,\frac{\kappa(b)}{1-\eta_\varepsilon}\right\}.
+\]
+This proves \eqref{eq:rescaled-limit}. When the new weights are exactly $tr_j$, the bounds coincide once $tM_\varepsilon\le\kappa(b)>0$, proving the eventual equality.
+
+If $\kappa(b)=0$, an optimal old-coordinate solution, extended by zero, gives the upper-limit bound in \eqref{eq:zero-limit}. Along a sequence realizing the lower limit, minimizers have bounded old coordinates and new coordinates of order $O(t)$. A convergent subsequence therefore yields $A_0u=b$, and convergence of the old weights gives the reverse inequality. This also covers empty coordinate blocks under the stated convention.
+\end{proof}
+
+For the marginal complex, let $\widetilde q_\varepsilon$ be full-support laws with $\widetilde q_\varepsilon\to q_0$ pointwise and
+\[
+ \widetilde q_\varepsilon(z)/t(\varepsilon)\longrightarrow q_1(z)
+ \quad(z\in E\setminus S),
+\]
+where $q_0,q_1,S$ are as in Corollary~\ref{cor:obstruction}. Define $\widetilde\Gamma_\varepsilon(c)$ by \eqref{eq:primitive} with $\widetilde q_\varepsilon$ in place of $q_\varepsilon$. Then
+\begin{equation}\label{eq:nonaffine-marginal}
+ t(\varepsilon)\widetilde\Gamma_\varepsilon(c)
+ \longrightarrow N^p_{S,\M,q_1}([c]).
+\end{equation}
+Indeed, the weight of every primitive coordinate outside a projection of $S$ is a finite sum of probabilities of states outside $S$, so its rescaled value tends to the corresponding $q_1$ marginal. Old-coordinate weights have positive limits. Proposition~\ref{prop:common-scale} applies. If $\widetilde q_\varepsilon(z)=t(\varepsilon)q_1(z)$ for every $z\notin S$ and all sufficiently small parameters, then $\widetilde\Gamma_\varepsilon(c)=N^p_{S,\M,q_1}([c])/t(\varepsilon)$ eventually whenever $[c]\ne0$.
+
+Asymptotic proportionality alone does not give an exact equality. For $A=\id_{\R}$, $b=1$, $J_0=\varnothing$, and $w(\varepsilon)=\varepsilon(1+\varepsilon)$, one has $\kappa=1$ and $\Gamma_\varepsilon=1/[\varepsilon(1+\varepsilon)]$. Thus $\varepsilon\Gamma_\varepsilon\to1$, but $\Gamma_\varepsilon\ne1/\varepsilon$.
+
+\paragraph{Several vanishing scales.}
+A further problem is to describe the leading exponent and coefficient when new-coordinate weights satisfy $w_j(\varepsilon)\sim a_j\varepsilon^{\beta_j}$ with $a_j,\beta_j>0$ and unequal exponents. At the linear-algebra level, the exponents order the coordinate subspaces whose images can resolve $b$ modulo $\im A_0$. For a family of probability laws, the primitive weights are marginals, so their exponents must first be obtained from sums of state probabilities. Determining how these successive images govern the leading minimum is beyond the common-scale result above.
+
+\section{Relative cohomology and the obstruction ball}\label{sec:relative}
+Let $Q=C_E/jC_S$. The quotient has a canonical coordinate representation consisting of the local coordinates outside the projections of $S$; in degree $-1$ these are $E\setminus S$. Assign each such coordinate its corresponding $q_1$ marginal weight $r_\ell>0$, and denote the weighted maximum norm by $\norm{\cdot}_{q_1,\mathrm{new}}$.
+
+For $v\in Z^{p-1}(Q)$ choose a lift $\bar v\in C_E^{p-1}$. Since $\delta_E\bar v\in jC_S^p$, the connecting homomorphism is
+\begin{equation}\label{eq:connecting}
+ \partial[v]=[j^{-1}\delta_E\bar v]\in H^p(C_S).
+\end{equation}
+Changing the lift by $jy$ changes this representative by $\delta_Sy$; changing $v$ by a relative boundary also leaves the class unchanged. This is the connecting map of the usual long exact sequence \cite[Tag~0117]{Stacks}.
+
+\begin{theorem}\label{thm:relative}
+For $p\ge0$, $\partial:H^{p-1}(Q)\to H^p(C_S)$ is surjective and
+\begin{equation}\label{eq:relative-norm}
+ N^p_{S,\M,q_1}(\alpha)=
+ \min\{\norm{v}_{q_1,\mathrm{new}}:v\in Z^{p-1}(Q),\ \partial[v]=\alpha\}.
+\end{equation}
+In particular, the unit ball is the centrally symmetric polytope
+\begin{equation}\label{eq:ball}
+ B_N=\{\partial[v]:\delta_Qv=0,\ |v_\ell|\le r_\ell\}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Given $c\in Z^p(C_S)$, Lemma~\ref{lem:acyclic} supplies $x$ with $\delta_Ex=jc$. Its relative image is a cocycle mapped to $[c]$, proving surjectivity.
+
+Use the coordinate partition in Corollary~\ref{cor:obstruction}. For a vector $v$ on the second block, the quotient equation in \eqref{eq:coefficient} is equivalent to
+\begin{equation}\label{eq:quotient-condition}
+ jc-A_1v\in\im A_0=j\im\delta_S^{p-1}.
+\end{equation}
+This implies $A_1v\in jC_S^p$, hence $\delta_Qv=0$, and then $\partial[v]=[c]$. Conversely, these two conditions imply \eqref{eq:quotient-condition}. The feasible sets coincide, so their weighted minima agree.
+
+The relative cocycle space intersected with the weighted box is a compact centrally symmetric polytope. Its image under $v\mapsto\partial[v]$ is \eqref{eq:ball}. Equation~\eqref{eq:relative-norm}, including attainment, identifies it with the norm unit ball.
+\end{proof}
+
+\begin{corollary}\label{cor:relative-isometry}
+Give $H^{p-1}(Q)$ the quotient norm obtained by minimizing $\norm{v}_{q_1,\mathrm{new}}$ over closed representatives. If $p\ge1$, the connecting homomorphism is an isometric isomorphism onto $(H^p(C_S),N^p_{S,\M,q_1})$. If $p=0$, it induces an isometric isomorphism
+\[
+ H^{-1}(Q)/\im\bigl(H^{-1}(C_E)\to H^{-1}(Q)\bigr)
+ \longrightarrow (H^0(C_S),N^0_{S,\M,q_1}),
+\]
+where the domain has the further quotient norm.
+\end{corollary}
+\begin{proof}
+The kernel of $\partial$ is the image of $H^{p-1}(C_E)$. Indeed, if $\partial[v]=0$, choose $y$ with $\delta_E\bar v=j\delta_Sy$; then $\bar v-jy$ is a closed lift of the same relative class. Conversely, a closed lift has zero connecting image. For $p\ge1$, Lemma~\ref{lem:acyclic} makes this kernel zero. For $p=0$ it need not vanish. Formula~\eqref{eq:relative-norm} gives the asserted norms after successive minimization over representatives and the kernel. All relevant subspaces are closed because the spaces are finite-dimensional.
+\end{proof}
+
+\section{Observation restriction and support enlargement}\label{sec:comparison}
+Let $\mathcal N=(N_a)_{a\in L}$ be another finite ordered observation list with $\langle\mathcal N\rangle\subseteq\langle\M\rangle$. Choose $f:L\to K$ satisfying $N_a\subseteq M_{f(a)}$. Extend alternating cochains to arbitrary ordered tuples by signs, assigning zero to repeated indices, as in the standard alternating \v{C}ech convention \cite[Tag~01FG]{Stacks}. For $J=\{a_0,\ldots,a_n\}$ put $N_J=\bigcap_{a\in J}N_a$ and define
+\begin{equation}\label{eq:restriction}
+ (F_f^nx)_{a_0\ldots a_n}
+ =L_{N_J\leftarrow\bigcap_{a\in J}M_{f(a)}}x_{f(a_0)\ldots f(a_n)},
+ \qquad F_f^{-1}=\id.
+\end{equation}
+
+\begin{theorem}\label{thm:restriction}
+The maps $F_f$ are cochain maps commuting with support extension by zero. For every full-support law $q$, they are nonexpansive for \eqref{eq:weighted}. Different choices of $f$ induce the same cohomology map $F_*$. For $p\ge0$,
+\begin{equation}\label{eq:contraction}
+ N^p_{S,\mathcal N,q_1}(F_*\alpha)\le N^p_{S,\M,q_1}(\alpha).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Transitivity of marginalization gives $\delta F_f=F_f\delta$ term by term. If selected indices repeat, the two terms deleting a repeated index cancel. The augmentation and extension by zero commute by the same marginalization identity.
+
+For $A\subseteq B$, the inequality $|x_B(b)|\le\lambda q_B(b)$ implies
+\begin{equation}\label{eq:box-contraction}
+ |L_{A\leftarrow B}x_B(a)|\le\sum_{b|_A=a}|x_B(b)|\le\lambda q_A(a).
+\end{equation}
+Each component of \eqref{eq:restriction} uses just one marginalization, proving nonexpansiveness.
+
+For choices $f,g$ and $n\ge1$, define, on increasing tuples,
+\begin{equation}\label{eq:homotopy}
+ (H^nx)_{a_0\ldots a_{n-1}}=
+ \sum_{k=0}^{n-1}(-1)^k L_{N_J\leftarrow B_k}
+ x_{f(a_0)\ldots f(a_k)g(a_k)\ldots g(a_{n-1})},
+\end{equation}
+where $B_k$ is the intersection of the observations occurring in the corresponding tuple, and $J=\{a_0,\ldots,a_{n-1}\}$. The inclusion $N_J\subseteq B_k$ holds. Set $H^0=0$. Expansion of $\delta H+H\delta$ cancels all interior terms; the endpoint terms give $F_g-F_f$. In degree zero this reads
+\[
+ (H^1\delta x)_a=L_{N_a\leftarrow M_{g(a)}}x_{g(a)}
+ -L_{N_a\leftarrow M_{f(a)}}x_{f(a)}.
+\]
+In degree $-1$ both maps are the identity. Thus the induced cohomology maps agree. This is the standard refinement homotopy \cite[Proposition~6.10 and Theorem~6.30]{BPSV}, here written with the coefficient maps explicit.
+
+If $\delta x=jc$, then $\delta F_fx=jF_fc$. Nonexpansiveness bounds the minimum primitive norm for $F_fc$ by that for $c$. Multiply by $\varepsilon$ and apply \eqref{eq:norm-limit} to obtain \eqref{eq:contraction}.
+\end{proof}
+
+\begin{corollary}\label{cor:list}
+If $\langle\M\rangle=\langle\mathcal N\rangle$, then $F_*$ is an isometric isomorphism for the obstruction norms. Hence these norms may be denoted $N^p_{S,\OO,q_1}$.
+\end{corollary}
+\begin{proof}
+Choose maps in both directions. Their composites are admissible choices for the identity inclusion and are homotopic to the identity choices. They induce inverse maps on cohomology. Applying \eqref{eq:contraction} in both directions gives equality of norms.
+\end{proof}
+This is an isometry of class norms; it does not assert equality of finite-parameter primitive minima for arbitrary representatives in different presentations.
+
+\begin{theorem}\label{thm:functor}
+Fix $E,q_1$ and $p\ge0$. On pairs $(S,\OO)$, declare an arrow $(S,\OO)\to(T,\OO')$ whenever $S\subseteq T$ and $\OO'\subseteq\OO$. Then
+\[
+ (S,\OO)\longmapsto\bigl(H^p(C_S(\OO)),N^p_{S,\OO,q_1}\bigr)
+\]
+defines a functor to finite-dimensional real normed spaces and linear nonexpansive maps, using maximal observation lists, ordered by a fixed total order on $2^I$, to fix representatives.
+\end{theorem}
+\begin{proof}
+Support enlargement is nonexpansive by Proposition~\ref{prop:support}; observation restriction is nonexpansive by Theorem~\ref{thm:restriction}. They commute at the cochain level. Composing selection maps agrees with composing inclusions, and the induced cohomology map is independent of the selections. Thus the identity and composition laws hold. Corollary~\ref{cor:list} identifies other generating lists isometrically.
+\end{proof}
+
+\begin{proposition}\label{prop:reference}
+If two full-support laws satisfy $a q_1\le q'_1\le b q_1$ pointwise, with $0<a\le b<\infty$, then
+\[
+ b^{-1}N^p_{S,\OO,q_1}(\alpha)
+ \le N^p_{S,\OO,q'_1}(\alpha)
+ \le a^{-1}N^p_{S,\OO,q_1}(\alpha).
+\]
+\end{proposition}
+\begin{proof}
+The same inequalities hold for all marginals. The feasible set in \eqref{eq:relative-norm} is unchanged, while every feasible vector's norm is bounded between the stated multiples. Take minima.
+\end{proof}
+
+\section{Binary examples}\label{sec:examples}
+\subsection{A nontrivial kernel in degree zero}
+Let $E=\{-1,1\}^2$, $S=\{(-1,-1),(1,1)\}$, and $\M=(\{1\},\{2\})$. Both local supports are full, so $Q$ is concentrated in degree $-1$, with coordinates $(+,-)$ and $(-,+)$. Take $q_1$ uniform, so both relative weights are $1/4$.
+
+Set $h(-1)=-1$, $h(1)=1$, and $c=(h,0)\in Z^0(C_S)$. Consistency in degree zero is equality of total masses; on the diagonal support, extendability requires equality of the two entire marginals. Thus $H^0(C_S)$ is one-dimensional with basis $[c]$. For relative coordinates $(s,t)$, the difference of the two marginals is $(s-t)h$, giving
+\[
+ \partial(s,t)=(s-t)[c],\qquad\ker\partial=\{(t,t):t\in\R\}.
+\]
+This kernel is the relative image of the signed measure with diagonal entries $-t$ and off-diagonal entries $t$, whose two marginals vanish.
+
+\begin{proposition}
+In this example $N(a[c])=2|a|$, and the obstruction unit ball is $\{a[c]:|a|\le1/2\}$.
+\end{proposition}
+\begin{proof}
+Theorem~\ref{thm:relative} gives $N(a[c])=\min_{s-t=a}4\max\{|s|,|t|\}$. The inequality $|a|\le|s|+|t|$ gives the lower bound $2|a|$, attained at $(s,t)=(a/2,-a/2)$.
+\end{proof}
+For $q_0$ uniform on $S$, a primitive of $c$ has entries $(1/2,1/2,-1/2,-1/2)$ in the order $(++,+-,-+,--)$. Its norm under $q_\varepsilon$ is $\max\{2/(2-\varepsilon),2/\varepsilon\}=2/\varepsilon$ for $0<\varepsilon\le1$, matching the relative lower bound. Restricting to either single observation eliminates the obstruction group.
+
+\subsection{A sharp degree-one correction norm}\label{subsec:triangle}
+Let $E=\{-1,1\}^3$, let $S_\Delta$ consist of the two constant triples, and take $q_0$ uniform on $S_\Delta$ and $q_1$ uniform on $E$. Write $ij=\{i,j\}$ and use the observation order $(12,23,13)$. The pair marginals are
+\[
+ q_{\varepsilon,ij}(a,b)=\frac{1+(1-\varepsilon)ab}{4}.
+\]
+The first two differentials, with the degree-one factors ordered as $W_{\{2\}}\oplus W_{\{1\}}\oplus W_{\{3\}}$, are
+\begin{align*}
+ \delta_0x&=(L_2x_{23}-L_2x_{12},\ L_1x_{13}-L_1x_{12},\ L_3x_{13}-L_3x_{23}),\\
+ \delta_1(a,b,c)&=\sum c-\sum b+\sum a,
+\end{align*}
+where $L_i$ denotes marginalization to coordinate $i$. Let $c=(h,0,0)$ with $h(-1)=-1$, $h(1)=1$. It is closed. On the diagonal support, identify each pair coefficient with a vector on $\{-1,1\}$. Boundaries have the form $(x_1-x_0,x_2-x_0,x_2-x_1)$ and therefore have zero alternating sum. The alternating sum of $c$ is $h$, so $[c]\ne0$.
+
+For $\varepsilon>0$, write $x_{ij}=q_{\varepsilon,ij}m_{ij}$ and minimize the maximum of the three $\norm{m_{ij}}_\infty$ subject to $\delta_0x=c$.
+\begin{proposition}\label{prop:triangle}
+The minimum is
+\begin{equation}\label{eq:triangle}
+ \Gamma_\varepsilon(c)=\max\left\{1,\frac{2}{3\varepsilon}\right\},
+ \qquad 0<\varepsilon\le1.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Suppose a feasible family has norm at most $\lambda$. Its coordinate sign moments must be $(a,b)$ for $x_{12}$, $(b+2,t)$ for $x_{23}$, and $(a,t)$ for $x_{13}$, since $\sum_z zh(z)=2$. Each moment has absolute value at most $\lambda$, whence $2\le2\lambda$. Also $\mathbb E_{q_\varepsilon}|Z_i-Z_j|=\varepsilon$, so
+\[
+ |a-b|\le\varepsilon\lambda,\qquad
+ |b+2-t|\le\varepsilon\lambda,\qquad
+ |t-a|\le\varepsilon\lambda.
+\]
+The three signed differences sum to $2$, proving $\lambda\ge2/(3\varepsilon)$.
+
+To attain the lower bounds, put $\rho=1-\varepsilon$ and define
+\[
+ m_{u,v}(z,z')=\frac{uz+vz'}{1+\rho zz'}.
+\]
+The corresponding signed measure is $(uz+vz')/4$, with total mass zero and moments $(u,v)$. Its norm is
+\[
+ \max\left\{\frac{|u+v|}{2-\varepsilon},\frac{|u-v|}{\varepsilon}\right\}.
+\]
+For $0<\varepsilon\le2/3$, choose moment pairs
+\[
+ (-1/3,-1),\qquad (1,1/3),\qquad(-1/3,1/3)
+\]
+in the order $(12,23,13)$. Their maximum norm is $2/(3\varepsilon)$. For $2/3\le\varepsilon\le1$, choose instead
+\[
+ (-\rho,-1),\qquad(1,\rho),\qquad(-\rho,\rho).
+\]
+The first two norms equal $1$, and the third is $2\rho/\varepsilon\le1$. In both cases the required marginal equations hold: each one-coordinate signed measure is determined by its total mass and sign moment, and all the constructed total masses vanish. Thus both lower bounds are attained in their respective ranges.
+\end{proof}
+The obstruction coefficient is $N([c])=2/3$. Although full support makes $H^1$ vanish for every $\varepsilon>0$, a primitive of norm at most one exists only for $\varepsilon\ge2/3$. Restriction to the two-observation list $(12,23)$ makes the degree-one differential surjective and sends this class to zero. The datum $c$ is a prescribed signed inconsistency, not a family of compatible conditional means of one global target.
+
+\section{Conclusion}
+The obstruction norm connects cohomology on a prescribed support with the cost of solving a marginal primitive problem after the support constraint is relaxed. For a fixed nonzero obstruction and an affine mixture with a full-support reference law, the minimum weighted primitive norm equals the obstruction norm divided by the mixture parameter for all sufficiently small positive parameters. The relative-complex description identifies its unit ball as the connecting image of a weighted coordinate box intersected with the relative cocycle space.
+
+These norms are invariant under changes of generating observation list and are nonincreasing under support enlargement and observation restriction. Thus the cohomological obstruction and its quantitative size can be compared using the same maps. The binary examples distinguish linear solvability from solvability within a prescribed pointwise bound, and exhibit the additional quotient required in degree zero.
+
+The common-scale extension shows that affine mixing is sufficient but not necessary for the limiting coefficient. If the newly available coordinates have weights asymptotic to a common positive scale times fixed weights, the rescaled minimum converges to the same quotient norm. Exact proportionality on these coordinates gives an eventual equality even when the old weights vary nonaffinely. The data remain fixed. Unequal vanishing scales and norm-preserving comparison with the order-complex presentation in degrees two and higher remain questions for further study.
+
+\appendix
+\section{Comparison with the order-complex presentation}\label{app:order}
+For the downward-closed family $\OO$, define $D_S^{-1}=\R^S$ and
+\[
+ D_S^n=\prod_{A_0\subsetneq\cdots\subsetneq A_n\text{ in }\OO}W_{A_0}(S)\quad(n\ge0).
+\]
+The differential is
+\begin{equation}\label{eq:order-differential}
+ (d x)_{A_0\ldots A_{n+1}}
+ =L_{A_0\leftarrow A_1}x_{A_1\ldots A_{n+1}}
+ +\sum_{i=1}^{n+1}(-1)^i x_{A_0\ldots\widehat A_i\ldots A_{n+1}},
+\end{equation}
+and the augmentation consists of all marginal maps. The tensor decomposition in Lemma~\ref{lem:acyclic} applies: the $U_B$ component is supported on the chains in $\{A\in\OO:B\subseteq A\}$. When nonempty, this poset has least element $B$, and its augmented constant-coefficient complex is contracted by inserting that element. Otherwise only degree $-1$ remains. Hence $H^p(D_E)=0$ for $p\ge0$. Giving the coefficient on a chain the weight $q_{A_0}$ defines obstruction norms $N^{p,D}$ by the same minimum and limit as in \eqref{eq:norm-limit}.
+
+Let $\mathcal U$ list every element of $\OO$ once, in an order extending inclusion. Restriction to tuples that are inclusion chains defines a nonexpansive cochain map $R:C_S(\mathcal U)\to D_S(\OO)$, with $R^{-1}=\id$: their intersections are $A_0$, and their differentials agree.
+
+\begin{proposition}\label{prop:order}
+For $p=0,1$, the map $R$ induces an isomorphism and
+\[
+ N^{p,D}_{S,\OO,q_1}(R_*\alpha)=N^p_{S,\OO,q_1}(\alpha).
+\]
+For arbitrary $p\ge0$, $R_*$ is nonexpansive.
+\end{proposition}
+\begin{proof}
+In degree zero the cochain spaces coincide. Agreement on every inclusion is equivalent to agreement on every intersection because $A\cap B\in\OO$. The augmentations also coincide. Thus both the cocycle spaces and the feasible global primitive sets agree.
+
+For a degree-one cocycle $u$ in $D_S$, set
+\begin{equation}\label{eq:inverse}
+ x_{A,B}=u_{A\cap B,B}-u_{A\cap B,A},\qquad u_{A,A}=0.
+\end{equation}
+The cocycle identity along $T\subseteq A\subseteq B$ is
+$u_{T,B}=u_{T,A}+L_{T\leftarrow A}u_{A,B}$.
+For $T=A\cap B\cap C$, this identity gives
+\[
+ L_{T\leftarrow A\cap B}x_{A,B}=u_{T,B}-u_{T,A}.
+\]
+The three differences in $(\delta x)_{A,B,C}$ therefore cancel. This proves that \eqref{eq:inverse} is a \v{C}ech cocycle, including cases where some inclusions are equalities. For $A\subsetneq B$, it gives $x_{A,B}=u_{A,B}$. Conversely, the \v{C}ech identity on $(A\cap B,A,B)$ yields \eqref{eq:inverse}. Therefore $R$ is a bijection on degree-one cocycles. It is the identity in degree zero, so boundaries correspond as well.
+
+On full support, injectivity on degree-one cocycles implies that, for the same degree-zero cochain $y$, the equations $dy=Rjc$ and $\delta y=jc$ are equivalent. Their weighted norms are identical. The primitive minima therefore agree for every positive parameter in degrees zero and one. Taking the limit and using Corollary~\ref{cor:list} gives the claimed isometry for any generating list. In arbitrary degree, applying the nonexpansive map $R$ to a primitive and taking the limit proves the one-sided inequality.
+\end{proof}
+
+\paragraph{The quantitative issue in higher degrees.}
+The low-degree argument compares identical global primitive spaces for $p=0$ and identical degree-zero primitive spaces for $p=1$. For $p\ge2$, the primitive spaces $C_E^{p-1}(\mathcal U)$ and $D_E^{p-1}(\OO)$ generally differ: the former includes tuples of incomparable observations that the latter omits. Restriction remains nonexpansive, but the reverse inequality would require lifting an order-complex primitive, with the prescribed differential, without increasing the optimal weighted norm. An algebraic homotopy equivalence alone does not supply this estimate.
+
+In particular, reconstruction formulas can involve sums of marginalizations. Although each marginalization is nonexpansive, the triangle inequality for such a sum need not give constant one. Moreover, \eqref{eq:inverse} reconstructs closed degree-one cochains; a degree-one primitive of a nonzero degree-two cocycle is not closed, so that formula does not directly extend the proof to $p=2$. A norm-controlled lifting argument, or another proof of the reverse inequality for the minima, is therefore needed. These observations delimit the present proof and do not establish failure of higher-degree isometry.
+
+\begin{thebibliography}{9}
+\bibitem{AB}
+S.~Abramsky and A.~Brandenburger,
+The sheaf-theoretic structure of non-locality and contextuality,
+\emph{New Journal of Physics} \textbf{13} (2011), no.~11, 113036.
+\href{https://doi.org/10.1088/1367-2630/13/11/113036}{doi:10.1088/1367-2630/13/11/113036}.
+
+\bibitem{BPSV}
+D.~Bennequin, O.~Peltre, G.~Sergeant-Perthuis, and J.~P.~Vigneaux,
+Extra-fine sheaves and interaction decompositions,
+preprint, 2020, \href{https://arxiv.org/abs/2009.12646v2}{arXiv:2009.12646v2}.
+
+\bibitem{Calegari}
+D.~Calegari,
+\emph{scl}, MSJ Memoirs, vol.~20,
+Mathematical Society of Japan, 2009.
+\href{https://math.uchicago.edu/~dannyc/books/scl/scl.html}{Author's book page}.
+
+\bibitem{Peltre}
+O.~Peltre,
+Local max-entropy and free energy principles, belief diffusions and their singularities,
+preprint, 2023, \href{https://arxiv.org/abs/2310.02946v1}{arXiv:2310.02946v1}.
+
+\bibitem{Robinson}
+M.~Robinson,
+Assignments to sheaves of pseudometric spaces,
+\emph{Compositionality} \textbf{2} (2020), article~2.
+\href{https://doi.org/10.32408/compositionality-2-2}{doi:10.32408/compositionality-2-2}.
+
+\bibitem{Stacks}
+The Stacks Project Authors,
+\emph{The Stacks Project},
+\href{https://stacks.math.columbia.edu/tag/0117}{Tag~0117} and
+\href{https://stacks.math.columbia.edu/tag/01FG}{Tag~01FG}, accessed 13 September 2026.
+\end{thebibliography}
+\end{document}

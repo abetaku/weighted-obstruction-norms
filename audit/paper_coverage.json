@@ -1,0 +1,165 @@
+{
+  "status": "complete",
+  "scope": "All numbered mathematical results in the supplied manuscript, including Appendix A.1; binary coordinate bridges and their stated supporting claims are included.",
+  "not_formalized": [
+    "Literature attribution, motivation, application discussion, and open future directions are prose, not proved propositions."
+  ],
+  "statements": [
+    {
+      "number": "2.1",
+      "tex_label": "lem:acyclic",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.FullSupportAcyclicity.full_exists_primitive",
+        "WeightedObstructionNorms.FullSupportAcyclicity.full_cohomology_eq_zero"
+      ]
+    },
+    {
+      "number": "3.1",
+      "tex_label": "thm:reciprocal",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.LinearProblem.affine_reciprocal",
+        "WeightedObstructionNorms.LinearProblem.dual_formula",
+        "WeightedObstructionNorms.LinearProblem.dual_attained",
+        "WeightedObstructionNorms.LinearProblem.common_scale_zero_limit"
+      ]
+    },
+    {
+      "number": "3.2",
+      "tex_label": "cor:obstruction",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.CechPrimitive.cost_eq_gamma",
+        "WeightedObstructionNorms.CechReciprocal.primitive_reciprocal",
+        "WeightedObstructionNorms.CechReciprocal.norm_limit",
+        "WeightedObstructionNorms.CechObstruction.norm_eq_zero_iff"
+      ]
+    },
+    {
+      "number": "3.3",
+      "tex_label": "prop:support",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.CechSupportNorm.norm_nonexpansive"
+      ]
+    },
+    {
+      "number": "3.4",
+      "tex_label": "prop:common-scale",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.LinearProblem.common_scale_limit",
+        "WeightedObstructionNorms.LinearProblem.common_scale_zero_limit",
+        "WeightedObstructionNorms.LinearProblem.common_scale_exact_eventual"
+      ]
+    },
+    {
+      "number": "4.1",
+      "tex_label": "thm:relative",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.CechObstruction.unit_ball",
+        "WeightedObstructionNorms.CechPolytope.unit_ball_finite_convexHull",
+        "WeightedObstructionNorms.CechPolytope.unit_ball_centrally_symmetric"
+      ]
+    },
+    {
+      "number": "4.2",
+      "tex_label": "cor:relative-isometry",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.CechRelativeIsometry.connectingIsometry",
+        "WeightedObstructionNorms.CechRelativeIsometry.quotientConnectingIsometryZero",
+        "WeightedObstructionNorms.CechRelativeIsometry.relative_norm_eq",
+        "WeightedObstructionNorms.CechRelativeIsometry.quotient_norm_eq_zero"
+      ]
+    },
+    {
+      "number": "5.1",
+      "tex_label": "thm:restriction",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.ObservationRestrictionNorm.norm_nonexpansive",
+        "WeightedObstructionNorms.ObservationHomotopy.homotopy_identity",
+        "WeightedObstructionNorms.ObservationAugmentation.restriction_augmentation"
+      ]
+    },
+    {
+      "number": "5.2",
+      "tex_label": "cor:list",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.ObservationListInvariance.generated_isometry"
+      ]
+    },
+    {
+      "number": "5.3",
+      "tex_label": "thm:functor",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.ObservationFunctor.functor",
+        "WeightedObstructionNorms.ObservationFunctor.map_id",
+        "WeightedObstructionNorms.ObservationFunctor.map_comp",
+        "WeightedObstructionNorms.ObservationFunctor.map_nonexpansive"
+      ]
+    },
+    {
+      "number": "5.4",
+      "tex_label": "prop:reference",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.CechObstruction.reference_comparison"
+      ]
+    },
+    {
+      "number": "6.1",
+      "tex_label": null,
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.DiagonalNorm.norm_multiple",
+        "WeightedObstructionNorms.DiagonalSpanning.cohomology_dimension",
+        "WeightedObstructionNorms.DiagonalSpanning.unit_ball",
+        "WeightedObstructionNorms.DiagonalConnecting.connecting_coordinates",
+        "WeightedObstructionNorms.DiagonalConnecting.connecting_kernel",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.coordinates_injective",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.reference_weight",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.zero_marginals",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.kernel_witness",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.no_positive_relative_coordinates",
+        "WeightedObstructionNorms.DiagonalRelativeCoordinates.cohomology_connecting_kernel",
+        "WeightedObstructionNorms.DiagonalCost.cost_eq",
+        "WeightedObstructionNorms.SmallObservationLists.single_cohomology_zero"
+      ]
+    },
+    {
+      "number": "6.2",
+      "tex_label": "prop:triangle",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.TriangleSetup.pair_weight",
+        "WeightedObstructionNorms.TriangleCocycle.feasible_iff",
+        "WeightedObstructionNorms.TriangleCocycle.c_closed",
+        "WeightedObstructionNorms.TriangleCost.cost_eq",
+        "WeightedObstructionNorms.TriangleNorm.obstruction_norm",
+        "WeightedObstructionNorms.TriangleNorm.obstruction_nonzero",
+        "WeightedObstructionNorms.TriangleNorm.unit_primitive_threshold",
+        "WeightedObstructionNorms.SmallObservationLists.two_cohomology_zero"
+      ]
+    },
+    {
+      "number": "A.1",
+      "tex_label": "prop:order",
+      "status": "complete",
+      "declarations": [
+        "WeightedObstructionNorms.OrderComplex.differential_formula",
+        "WeightedObstructionNorms.OrderComplex.full_exists_primitive",
+        "WeightedObstructionNorms.OrderComparison.restriction_apply",
+        "WeightedObstructionNorms.OrderComparison.norm_nonexpansive",
+        "WeightedObstructionNorms.OrderLowIsometry.zero",
+        "WeightedObstructionNorms.OrderLowIsometry.one",
+        "WeightedObstructionNorms.OrderLowIsometry.any_generating_list"
+      ]
+    }
+  ]
+}

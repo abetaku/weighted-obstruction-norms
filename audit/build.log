@@ -1,0 +1,594 @@
+⚠ [1978/2054] Replayed WeightedObstructionNorms.DiagonalCohomology
+warning: ././././WeightedObstructionNorms/DiagonalCohomology.lean:41:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1980/2054] Replayed WeightedObstructionNorms.FiniteObservations
+warning: ././././WeightedObstructionNorms/FiniteObservations.lean:20:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FiniteObservations.restrict_project':
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FiniteObservations.lean:23:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FiniteObservations.restrict_comp':
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FiniteObservations.lean:33:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FiniteObservations.projected_mem':
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FiniteObservations.lean:99:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FiniteObservations.project_surjective':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1981/2054] Replayed WeightedObstructionNorms.CechLowDegrees
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:24:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.subset01':
+  [Fintype I]
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:26:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.subset02':
+  [Fintype I]
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:30:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.subset12':
+  [Fintype I]
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:68:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.d0_augmentation':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:92:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.extend_d0':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:105:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.extend0_injective':
+  [Fintype K]
+  [PartialOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [PartialOrder K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:109:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.extend1_injective':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowDegrees.lean:128:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.extend_augmentation':
+  [Fintype K]
+  [PartialOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [PartialOrder K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1982/2054] Replayed WeightedObstructionNorms.ObservationRestriction0
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:14:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.closed_marginals_equal':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:39:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.restriction0_closed':
+  [Fintype L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:47:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.restriction0_augmentation':
+  [Fintype K]
+  [LinearOrder K]
+  [Fintype L]
+  [LinearOrder L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [LinearOrder K] [Fintype L] [LinearOrder L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:92:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.restriction0_support':
+  [Fintype K]
+  [LinearOrder K]
+  [Fintype L]
+  [LinearOrder L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [LinearOrder K] [Fintype L] [LinearOrder L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:108:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.restriction0_identity':
+  [Fintype K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [LinearOrder K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:124:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.restriction0_comp':
+  [Fintype K]
+  [LinearOrder K]
+  [Fintype L]
+  [LinearOrder L]
+  [Fintype R]
+  [LinearOrder R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [LinearOrder K] [Fintype L] [LinearOrder L] [Fintype R] [LinearOrder R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/ObservationRestriction0.lean:161:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowDegrees.exists_selection':
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype K]
+  [LinearOrder K]
+  [Fintype L]
+  [LinearOrder L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [Fintype K] [LinearOrder K] [Fintype L] [LinearOrder L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1984/2054] Replayed WeightedObstructionNorms.CechAllDegrees
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:33:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.face_identity':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:41:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.mem_observation':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:58:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.marginal_congr':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:118:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.extension_injective':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:161:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.cochain_zero_above':
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:165:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.extension_identity':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:172:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.extension_comp':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:200:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.tuple_zero_unique':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechAllDegrees.lean:222:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.globalProject_surjective':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1985/2054] Replayed WeightedObstructionNorms.CechWeights
+warning: ././././WeightedObstructionNorms/CechWeights.lean:43:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAllDegrees.coordinateWeight_positive':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1987/2054] Replayed WeightedObstructionNorms.SimplexContraction
+warning: ././././WeightedObstructionNorms/SimplexContraction.lean:81:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SimplexContraction.contraction_positive':
+  [Module ℝ V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Module ℝ V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/SimplexContraction.lean:85:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SimplexContraction.contraction_not_positive':
+  [Module ℝ V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Module ℝ V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1988/2054] Replayed WeightedObstructionNorms.InteractionCoordinates
+warning: ././././WeightedObstructionNorms/InteractionCoordinates.lean:126:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.InteractionCoordinates.product_supported':
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/InteractionCoordinates.lean:153:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.InteractionCoordinates.complete_mem':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/InteractionCoordinates.lean:162:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.InteractionCoordinates.complete_supported':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/InteractionCoordinates.lean:167:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.InteractionCoordinates.complete_project':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1989/2054] Replayed WeightedObstructionNorms.FullSupportAcyclicity
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:21:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.supported':
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:34:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.forget_eligible':
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:41:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.forget_face':
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype K]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [Fintype K] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:54:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.evaluation_congr':
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype K]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [Fintype K] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:145:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.toRaw_ofRaw':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:147:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.ofRaw_toRaw':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/FullSupportAcyclicity.lean:203:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.FullSupportAcyclicity.componentExact':
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1990/2054] Replayed WeightedObstructionNorms.CechSplitting
+warning: ././././WeightedObstructionNorms/CechSplitting.lean:45:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSplitting.takeOld_extension':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechSplitting.lean:50:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSplitting.extension_zero':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechSplitting.lean:69:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSplitting.takeOld_putNew':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechSplitting.lean:74:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSplitting.takeNew_putNew':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1991/2054] Replayed WeightedObstructionNorms.CechObstruction
+warning: ././././WeightedObstructionNorms/CechObstruction.lean:18:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechObstruction.newWeight_positive':
+  [Fintype K]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1992/2054] Replayed WeightedObstructionNorms.CechRelative
+warning: ././././WeightedObstructionNorms/CechRelative.lean:36:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechRelative.parts_injective':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1993/2054] Replayed WeightedObstructionNorms.CechSupportNorm
+warning: ././././WeightedObstructionNorms/CechSupportNorm.lean:14:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSupportNorm.takeOld_included':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechSupportNorm.lean:19:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechSupportNorm.takeNew_included':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1994/2054] Replayed WeightedObstructionNorms.CechPrimitive
+warning: ././././WeightedObstructionNorms/CechPrimitive.lean:23:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechPrimitive.join_split':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechPrimitive.lean:26:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechPrimitive.split_join':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1995/2054] Replayed WeightedObstructionNorms.CechReciprocal
+warning: ././././WeightedObstructionNorms/CechReciprocal.lean:19:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechReciprocal.mixture_positive':
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2002/2054] Replayed WeightedObstructionNorms.SlicePolytope
+warning: ././././WeightedObstructionNorms/SlicePolytope.lean:20:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SlicePolytope.extreme_same_active':
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/SlicePolytope.lean:72:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SlicePolytope.slice_eq_inter':
+  [Fintype J]
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] [DecidableEq J] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2004/2054] Replayed WeightedObstructionNorms.AlternatingEvaluation
+warning: ././././WeightedObstructionNorms/AlternatingEvaluation.lean:21:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.AlternatingEvaluation.ordered_eq_of_containment':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/AlternatingEvaluation.lean:58:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.AlternatingEvaluation.orientation_perm':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/AlternatingEvaluation.lean:74:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.AlternatingEvaluation.decompose_injective':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/AlternatingEvaluation.lean:110:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.AlternatingEvaluation.augmented_det':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/AlternatingEvaluation.lean:192:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.AlternatingEvaluation.pull_differential':
+  [Fintype L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [2005/2054] Replayed WeightedObstructionNorms.ListPrism
+info: ././././WeightedObstructionNorms/ListPrism.lean:96:27: Try this: abel_nf
+info: ././././WeightedObstructionNorms/ListPrism.lean:96:27: Try this: abel_nf
+⚠ [2006/2054] Replayed WeightedObstructionNorms.ObservationRestriction
+warning: ././././WeightedObstructionNorms/ObservationRestriction.lean:66:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.ObservationRestriction.selected_face':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2008/2054] Replayed WeightedObstructionNorms.PrismEvaluation
+warning: ././././WeightedObstructionNorms/PrismEvaluation.lean:120:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.PrismEvaluation.homotopy_identity':
+  [Fintype L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2015/2054] Replayed WeightedObstructionNorms.FiniteNormedCategory
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:34:5: unused variable `X`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:36:10: unused variable `f`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:37:10: unused variable `f`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:38:8: unused variable `f`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:38:10: unused variable `g`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/FiniteNormedCategory.lean:38:12: unused variable `h`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2019/2054] Replayed WeightedObstructionNorms.ObservationFunctor
+warning: ././././WeightedObstructionNorms/ObservationFunctor.lean:29:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.ObservationFunctor.maximal_cover':
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2022/2054] Replayed WeightedObstructionNorms.CechLowComparison
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:75:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.cochainEquiv_apply':
+  [Fintype K]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:86:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.component_marginal':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:94:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.face_zero_two':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:96:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.face_one_two':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:98:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.face_zero_three':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:101:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.face_one_three':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:104:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.face_two_three':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/CechLowComparison.lean:144:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechLowComparison.coefficientCongr_global':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2023/2054] Replayed WeightedObstructionNorms.OrderComplex
+warning: ././././WeightedObstructionNorms/OrderComplex.lean:33:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComplex.differential_squared':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComplex.lean:47:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComplex.differential_formula':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComplex.lean:72:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComplex.component_exact':
+  [DecidableEq I]
+  [(i : I) → Fintype (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] [(i : I) → Fintype (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2025/2054] Replayed WeightedObstructionNorms.OrderRestriction
+warning: ././././WeightedObstructionNorms/OrderRestriction.lean:17:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderRestriction.selected_face':
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2029/2054] Replayed WeightedObstructionNorms.OrderComparison
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:19:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.selection_valid':
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:33:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.restriction_apply':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:53:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.chainTuple_injective':
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:59:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.chainTuple_surjective_zero':
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:65:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.chainTuple_surjective_one':
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderComparison.lean:111:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderComparison.generated_list':
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2030/2054] Replayed WeightedObstructionNorms.OrderLowZero
+warning: ././././WeightedObstructionNorms/OrderLowZero.lean:11:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowZero.closed_marginal_inclusion':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderLowZero.lean:48:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowZero.closed_to_order':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2031/2054] Replayed WeightedObstructionNorms.OrderPrimitiveComparison
+warning: ././././WeightedObstructionNorms/OrderPrimitiveComparison.lean:18:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderPrimitiveComparison.feasible_iff':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2032/2054] Replayed WeightedObstructionNorms.OrderLowOneInjective
+warning: ././././WeightedObstructionNorms/OrderLowOneInjective.lean:24:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowOneInjective.marginal_injective_of_eq':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2033/2054] Replayed WeightedObstructionNorms.OrderLowOneInverse
+warning: ././././WeightedObstructionNorms/OrderLowOneInverse.lean:18:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowOneInverse.value_self':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderLowOneInverse.lean:21:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowOneInverse.value_strict':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderLowOneInverse.lean:88:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowOneInverse.value_congr_left':
+  [Fintype I]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/OrderLowOneInverse.lean:149:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.OrderLowOneInverse.oldRestriction_closed':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2035/2054] Replayed WeightedObstructionNorms.BinaryMarginals
+warning: ././././WeightedObstructionNorms/BinaryMarginals.lean:50:11: unused variable `z`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././WeightedObstructionNorms/BinaryMarginals.lean:81:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.BinaryMarginals.project_pair_eq':
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2041/2054] Replayed WeightedObstructionNorms.TriangleNorm
+warning: ././././WeightedObstructionNorms/TriangleNorm.lean:22:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2042/2054] Replayed WeightedObstructionNorms.CechAugmentationNorm
+warning: ././././WeightedObstructionNorms/CechAugmentationNorm.lean:10:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAugmentationNorm.global_weight':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2048/2054] Replayed WeightedObstructionNorms.SmallObservationLists
+warning: ././././WeightedObstructionNorms/SmallObservationLists.lean:18:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SmallObservationLists.marginal_surjective':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././WeightedObstructionNorms/SmallObservationLists.lean:25:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.SmallObservationLists.single_augmentation_surjective':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2049/2054] Replayed WeightedObstructionNorms.CechAugmentationExtension
+warning: ././././WeightedObstructionNorms/CechAugmentationExtension.lean:15:0: automatically included section variable(s) unused in theorem 'WeightedObstructionNorms.CechAugmentationExtension.extension_augmentation':
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully.

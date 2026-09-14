@@ -1,0 +1,43 @@
+# Build caches; retain audit logs supplied as evidence.
+.lake/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.aux
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+paper/*.log
+paper/*.bbl
+paper/*.blg
+*.zip
+.DS_Store
+Thumbs.db
+
+# Local credentials and private configuration.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+client_secret*.json
+
+# Local editor settings and temporary runtimes.
+.vscode/
+.idea/
+*~
+*.swp
+*.swo
+.venv/
+venv/
+lean-runtime/
+*.so
+*.dylib
+*.dll
+*.o

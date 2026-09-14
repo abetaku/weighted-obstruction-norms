@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-14",
+  "inputs": [
+    {
+      "uploaded_name": "weighted_obstruction_norms_ja(1).pdf",
+      "size_bytes": 301821,
+      "sha256": "ce48b8263c5dd450274bfbd3f2d61f36a08cbb813bf132ab703d21b88b3d9423"
+    },
+    {
+      "uploaded_name": "weighted_obstruction_norms_ja(1).tex",
+      "size_bytes": 46250,
+      "sha256": "8f97625e874c0c835ac67fd9220186760c0f824196e8f0439b7209fee620cc90"
+    },
+    {
+      "uploaded_name": "weighted_obstruction_norms_lean(1).zip",
+      "size_bytes": 288794,
+      "sha256": "2fff3acdb142de9c63fc4cd5e9cadf713e67e0cacc2fd55b99196c47270308d3"
+    },
+    {
+      "uploaded_name": "weighted_obstruction_norms_en(1).pdf",
+      "size_bytes": 406415,
+      "sha256": "6da115feb219d6b72f4e43480447386021f06d025505426aff165720faa819da"
+    },
+    {
+      "uploaded_name": "weighted_obstruction_norms_en(2).tex",
+      "size_bytes": 41589,
+      "sha256": "d3aca7257183ba0b4b8e6d32f3e6c769d862d63fd280d78444d988d6aa527db1"
+    }
+  ],
+  "original_zip_entries_preserved": 116,
+  "source_hashes_matched": 77,
+  "package_output_hashes_matched": 115,
+  "english_manuscripts_byte_identical": true,
+  "lean_rerun_this_import": false,
+  "pdf_rebuilt_this_import": false
+}

@@ -1,0 +1,3 @@
+# Preserve uploaded source bytes and recorded hashes across operating systems.
+* -text
+*.pdf binary

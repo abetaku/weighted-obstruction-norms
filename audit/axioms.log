@@ -1,0 +1,1207 @@
+'WeightedObstructionNorms.exact_of_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.cohomologous_refl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.cohomologous_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.cohomologous_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.homotopic_cohomologous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.connecting_lift_independence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.connecting_kernel_iff_closed_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.alternating_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.ordered_eq_of_containment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.orientation_ordered' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_ordered' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.orientation_perm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_perm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_not_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.decompose_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.alternating_ext' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.augmented_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.rawDifferential_evaluate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.rawDifferential_evaluate_perm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.rawDifferential_evaluate_not_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_smul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_linear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_pull' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.pull_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.pull_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.pull_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.AlternatingEvaluation.evaluate_orderEmbedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.diagonal_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.diagonal_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.diagonal_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_moment_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.pairCost_le_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_small_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_large_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.pair_moments_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_cost_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_moment_minimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangleFromMoments_feasible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.pairBox_fromMoments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangleBox_fromMoments' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_full_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryExamples.triangle_full_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.supportRestrict_const' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.marginal_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.project_pair_eq' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.push_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.full_pair_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.full_pair_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryMarginals.cast_marginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryPairCoordinates.decode_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.BinaryPairCoordinates.encode_decode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryPairCoordinates.decode_encode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.BinaryPairCoordinates.box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.skip_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.face_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.mem_observation' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.observation_face' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.marginal_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.coface_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.differential_squared' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_coface' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_boundaries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cohomologyExtension_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.tuple_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cochain_zero_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cohomologyExtension_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cohomologyExtension_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.tuple_zero_unique' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.observation_zero' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.globalProject_zero_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.globalProject_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.augmentationEquiv_push' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.differential_augmentation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAugmentationExtension.extension_augmentation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAugmentationNorm.global_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAugmentationNorm.norm_box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechCoordinateNorm.putNew_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechCoordinateNorm.takeNew_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.one_observation' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.two_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.three_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.coefficientCongr_marginal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.cochainEquiv_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.component_marginal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.face_zero_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.face_one_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.face_zero_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.face_one_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.face_two_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.differential_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.differential_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.coefficientCongr_global' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.augmentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.boundariesZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.boundariesOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.coefficientCongr_box_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowComparison.cochain_box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.subset01' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.subset02' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.subset12' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.d1_d0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.d0_augmentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend_d0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend_d1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend0_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend1_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend_augmentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend_boundaries0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.extend_boundaries1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.cohomologyExtend0_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.cohomologyExtend1_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechObstruction.newWeight_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.norm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.norm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.norm_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.norm_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.norm_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.weight_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechObstruction.reference_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechObstruction.connecting_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechObstruction.unit_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechPolytope.unit_ball_finite_convexHull' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechPolytope.unit_ball_centrally_symmetric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.join_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.split_join' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.split_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.split_feasible_of_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.cost_eq_gamma_of_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.split_feasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechPrimitive.cost_eq_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.mixture_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.weight_mixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.weight_outside_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.weight_on_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.primitive_reciprocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechReciprocal.norm_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechRelative.parts_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechRelative.predecessor_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechRelative.connecting_preserves_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechRelative.quotientConnecting_preserves_norm_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.TransportedNorm.norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechRelativeIsometry.relative_norm_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechRelativeIsometry.quotient_norm_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechSplitting.takeOld_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.extension_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.takeNew_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.takeOld_putNew' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.takeNew_putNew' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.split_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.differential_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.differential_takeOld' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.differential_takeNew' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.closed_takeOld' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.parts_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSplitting.cycleEquivOfExact_boundaries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechSplitting.cycleEquiv_boundaries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.takeOld_included' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.takeNew_included' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.closed_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.new_map_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.new_map_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.cohomology_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechSupportNorm.norm_nonexpansive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.box_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.coordinateWeight_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cochainNorm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cochainNorm_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cochainNorm_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.cochainNorm_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechAllDegrees.extension_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.tendsto_weightedNorm_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.scaled_gamma_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.scaled_gamma_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.common_scale_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.common_scale_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_unit_ball' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.shift_quotientFeasible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_nonexpansive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.full_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.extension_takeOld' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.extension_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.c_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.eval_extension_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.four_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCocycle.feasible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.old_marginals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.new_marginals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.boundary_coordinate_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.classCoordinate_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.coordinate_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.generator_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.generator_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.coordinate_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.cohomology_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.connecting_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.relative_constraint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.connecting_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.referenceWeight_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.obstruction_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.obstruction_generator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.unit_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCohomology.affine_primitive_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.takeNew_one_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.primitive_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.primitive_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.primitive_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.connecting_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.connecting_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.connecting_kernel_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.takeNew_augmentation_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.relativeCycle_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.coordinates_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalConnecting.connecting_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.decode_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.encode_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.decode_encode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.eval_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.augmentation_first' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.augmentation_second' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalCoordinates.box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.pair_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.primitive_feasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.primitive_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.norm_box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.witness_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.feasible_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalCost.cost_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalNorm.obstruction_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalNorm.obstruction_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalNorm.norm_multiple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalNorm.unit_ball_multiple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.newGlobalPoint_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.off_not_supported' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.coordinates_first' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.coordinates_second' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.coordinates_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.reference_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.zero_marginals' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.kernel_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.projected_subsingleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.no_positive_relative_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.cohomology_connecting_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalRelativeCoordinates.cohomology_connecting_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.mem_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q₀_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q₀_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q₀_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q₁_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.q_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSetup.singleton_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.globalExtend_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.differential_correction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.supported_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.class_spanning' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.generatorEquiv_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.cohomology_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.norm_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.DiagonalSpanning.unit_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.supporting_functional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.linear_coordinate_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.linear_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.linear_box_dual_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.dual_weak_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.dual_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.dual_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteNormed.Hom.ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.restrict_project' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.restrict_comp' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.projected_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.supportInclude_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.supportRestrict_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.support_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.marginal_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.extension_commutes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.extension_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.weight_marginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.project_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.weight_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FiniteObservations.weighted_marginal_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.forget_eligible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.eligible_forget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.forget_face' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.evaluation_congr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.component_assemble' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.component_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.component_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.raw_exists_primitive_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.fullPoint_val' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.fullPoint_coe' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.toRaw_ofRaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.ofRaw_toRaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.full_push' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.marginal_toRaw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.toRaw_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.full_exists_primitive_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.componentExact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.raw_exists_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.full_exists_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.full_cohomology_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.FullSupportAcyclicity.full_cohomology_subsingleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.inverse_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.product_inverse_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.inverse_forward_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.forward_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.forward_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.forward_inverse_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.equiv_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.equiv_symm_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.sum_mul_push' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.product_supported' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.forward_project' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.complete_mem' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.project_complete' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.complete_supported' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.complete_project' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.product_restrict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.InteractionCoordinates.forward_restrict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.quotientFeasible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.quotientFeasible_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.fullFeasible_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.quotientFeasible_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.fullFeasible_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.gamma_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.coefficient_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.reciprocal_lower_pointwise' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.reciprocal_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.reciprocal_eq_of_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ListPrism.cone_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.map_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.boundary_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.boundary_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.map_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.boundary_map_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.boundary_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_identity_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_naturality_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ListPrism.prism_naturality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_injective_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.push_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.box_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.Marginal.weightedNorm_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.le_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.minimum_mono_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.NormedCohomology.norm_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.reference_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationAugmentation.restriction_augmentation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.maximal_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.generated_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.exists_selection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.selection_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.map_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.map_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.map_nonexpansive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.project_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.project_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.pair_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.project_homotopy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.homotopy_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.homotopy_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationHomotopy.cohomologyMap_choice_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationListInvariance.mutual_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationListInvariance.norm_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationListInvariance.generated_isometry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.contains' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.project_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.project_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.evaluate_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.selected_face' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.restriction_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.project_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.restriction_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.restriction_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.project_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.restriction_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.boundaries_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.cohomologyMap_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.cohomologyMap_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.cohomologyMap_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestriction.cohomologyMap_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.closed_marginals_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_augmentation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_boundaries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionCycle0_choice_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionH0_choice_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionH0_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionH0_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restriction0_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionH0_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.restrictionH0_mutual_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.exists_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.CechLowDegrees.generated_H0_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.marginal_box' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.project_box' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.evaluate_box' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.cochain_nonexpansive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.putNew_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.takeNew_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.new_map_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.cohomology_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationRestrictionNorm.norm_nonexpansive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.selection_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComparison.restriction_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComparison.restriction_augmentation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.chainTuple_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.chainTuple_surjective_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.chainTuple_surjective_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.cochainEquiv_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComparison.cochain_norm_eq_of_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderComparison.norm_nonexpansive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComparison.generated_list' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.observation_head' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.differential_squared' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.observation_face_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.observation_face_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.differential_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.component_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.full_exists_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderComplex.full_cohomology_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowIsometry.any_generating_list' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.restriction_degree_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.marginal_injective_of_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.old_cycle_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.cycle_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.cost_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInjective.norm_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.value_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.value_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.value_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.value_difference_marginal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.value_congr_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.inverse_liftPair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.inverse_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.oldRestriction_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.inverse_oldRestriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.boundaries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowOneInverse.cohomologyEquiv_eq_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.closed_marginal_inclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.closed_from_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.closed_to_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.closed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.boundaries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.restriction_degree_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderLowZero.cohomologyEquiv_eq_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderObstruction.norm_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.restriction_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.feasible_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.cost_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.cost_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderPrimitiveComparison.norm_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderRestriction.selected_face' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderRestriction.restriction_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderRestriction.restriction_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderRestriction.cochain_nonexpansive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderRestriction.boundaries_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderRestrictionNorm.new_map_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderRestrictionNorm.cohomology_naturality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.OrderRestrictionNorm.norm_nonexpansive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.boundary_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.onList_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_atom_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_boundary_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_differential_atom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_differential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.pair_map_orderEmbedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.PrismEvaluation.homotopy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.smul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.smul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.unit_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.QuotientNorm.reference_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.affine_reciprocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.boundaries_connecting_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.connecting_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.class_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.connecting_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.full_boundaries_map_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.fullToRelative_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.connecting_kernel_eq_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.connecting_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientConnectingEquiv_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.representatives_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.representatives_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.representatives_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.relativeValue_attained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.representatives_eq_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.connecting_preserves_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientRepresentatives_eq_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientConnecting_preserves_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientRepresentatives_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.relativeValue_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientValue_le_relativeValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.quotientValue_attained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.successive_minimum_attained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativePredecessor.successive_minimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.classOf_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.connecting_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.connecting_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.quotient_condition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.feasible_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_eq_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.relativeFeasible_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_attained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.relative_unit_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.connecting_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.relativeFeasible_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.relativeFeasible_smul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_smul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.obstruction_smul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.RelativeWindow.primitive_reciprocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.face_zero_prepend' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.positive_face' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.face_succ_prepend' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.head_bot_of_not_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.positive_tail' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.prepend_tail' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.not_positive_other_face' depends on axioms: [propext, Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.contraction_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.contraction_not_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.primitive_of_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SimplexContraction.exists_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.extreme_same_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.finite_extremePoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.slice_eq_inter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.compact_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.convex_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.exists_finite_convexHull' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SlicePolytope.image_exists_finite_convexHull' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.push_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.marginal_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.single_augmentation_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.single_cohomology_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.two_differential_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.SmallObservationLists.two_cohomology_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.singleton_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.full_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.extension_takeOld' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.extension_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.c_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.eval_extension_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.six_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.low_feasible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCocycle.feasible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.encode_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.decode_encode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.decode_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.decode_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.decode_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.edge_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.edge_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.eval_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.eval_d0_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.eval_d0_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.eval_d0_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCoordinates.box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCost.norm_box_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCost.feasible_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleCost.cost_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleNorm.obstruction_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleNorm.obstruction_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleNorm.unit_primitive_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.sum_states' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.mem_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.q₀_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.q₀_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.q₀_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.q₁_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.q_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.pair_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.TriangleSetup.pair_weight_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.continuous_weightedNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_le_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.coordinate_le_weightedNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_scale_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.weightedNorm_mono_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.exists_weightedNorm_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.boundaries_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.cohomologyMap_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.connecting_naturality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.maps_feasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.obstruction_nonexpansive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.normedMap_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.cohomologyMap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.cohomologyMap_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.WindowMap.cohomologyMap_eq_of_homotopy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.WindowMap.obstruction_eq_of_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.oldValue_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.oldValue_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.exists_old_correction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.gamma_le_old_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.oldValue_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.LinearProblem.zero_obstruction_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.common_scale_zero_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.LinearProblem.common_scale_exact_eventual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechRelativeIsometry.connectingIsometry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.CechRelativeIsometry.quotientConnectingIsometryZero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'WeightedObstructionNorms.ObservationFunctor.functor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowIsometry.one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeightedObstructionNorms.OrderLowIsometry.zero' depends on axioms: [propext, Classical.choice, Quot.sound]

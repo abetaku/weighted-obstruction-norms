@@ -1,0 +1,523 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools,fontspec}
+\setmainfont{Noto Serif CJK JP}[BoldFont={Noto Serif CJK JP Bold},ItalicFont={Noto Serif CJK JP},BoldItalicFont={Noto Serif CJK JP Bold}]
+\newfontfamily\latinfont{Latin Modern Roman}
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 1pt
+\setlength{\emergencystretch}{2em}
+\renewcommand{\abstractname}{要旨}
+\renewcommand{\refname}{参考文献}
+\usepackage[margin=28mm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\setlength{\parindent}{1em}
+\hypersetup{pdftitle={有限周辺化複体の重み付き障害ノルム},pdfauthor={Takuya Abe},pdfkeywords={marginal distributions, relative cohomology, Cech complexes, support degeneration, quotient norms}}
+\setlist{itemsep=2pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheoremstyle{japanese}{6pt}{6pt}{\normalfont}{} {\bfseries}{．}{.5em}{}
+\theoremstyle{japanese}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{注意}
+\renewcommand{\proofname}{\textbf{証明}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\M}{\mathcal M}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\DeclareMathOperator{\conv}{conv}
+\title{有限周辺化複体の重み付き障害ノルム}
+\author{Takuya Abe}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+有限観測族と指定された支持に付随する，局所的な符号付き測度の増大 {\latinfont\v{C}ech} 複体を考察する．固定した非零のコホモロジー的障害に対して，アフィン確率混合の下での原始の最小重み付きノルムは，十分小さい正の混合パラメータの逆数に厳密に比例する．その係数は障害空間上のノルムを定める．単位球は，重み付き座標の箱と相対コサイクル空間の共通部分を，相対複体の連結準同型で写した像となる．このノルムは生成観測リストに依存せず，支持拡大および観測制限に対して非増加である．また，零次・一次で順序複体表示との等長比較を示す．二値モデルでは障害単位球と鋭い最小補正ノルムを具体的に求める．共通の退化尺度を持つ非アフィン重みに対しても，同じ商の係数が尺度を掛けた極限を定める．退化する重みが厳密に比例する場合には，十分小さいパラメータで等式が成立する．
+\end{abstract}
+\noindent\textbf{キーワード．} 周辺分布，相対コホモロジー，{\latinfont\v{C}ech} 複体，支持の退化，商ノルム．
+
+\section{序論}
+局所的な整合性と有界な実現可能性は，部分観測の族に異なる条件を課す．周辺化方程式に符号付きの解が存在しても，すべての解が指定された各点での上界を超えることがある．この違いは支持境界の近傍で顕著になる．確率零の状態を除外することによって線形的な障害が生じる一方，それらの状態に小さい正の確率を与えると，解のノルムの増大を伴って可解性が回復し得る．
+
+周辺分布の延長問題には，代数的およびコホモロジー的な定式化がある．Bennequin，Peltre，Sergeant-Perthuis，Vigneaux は相互作用分解，周辺分布問題，{\latinfont\v{C}ech} 構成と神経の構成との比較を研究している\cite[Sections~5--6]{BPSV}．整合性の定量化は，擬距離空間の層への割当てに関する Robinson の理論でも扱われる\cite[Definitions~7 and~9]{Robinson}．本稿で考える量は，指定したコサイクルの原始の最小ノルムであり，与えられた割当ての整合性半径とは異なる．
+
+有限個の測定からなる設定では，同時に実施できる測定の集合ごとに結果の同時分布を指定する．共通の測定に関する周辺分布の一致が，局所的な整合条件である．Abramsky--Brandenburger の枠組みでは，この条件から大域的な符号付き延長が得られるが，非負な大域的延長が存在するとは限らない\cite[Theorems~5.5 and~5.9]{AB}．この違いは，線形的な整合性だけでは確率的な実現可能性が決まらない理由を示している．本稿では，さらに支持を指定し，基準法則に対する上界を課す．ここで用いる対称な上界は符号付き測度を許すため非負性とは異なり，得られるノルムを文脈性の尺度と同一視しない．
+
+関連する解釈は，周辺化が整合性を表す局所密度の記述からも得られる\cite[Definition~7]{Peltre}．局所的な符号付き測度 $x_A$ と正の基準周辺確率 $q_A$ に対して $x_A=q_A m_A$ と書けば，$|x_A|\le Lq_A$ は振幅制約 $|m_A|\le L$ と同値になる．零次では大域的な密度が条件付き平均を定め，一次では原始が指定した周辺分布の不整合を補正する．確率の小さい状態に所定の符号付き補正を担わせるには，基準確率に対する密度が大きくなる必要がある．原始の最小ノルムは，線形的な延長や補正の存在と，一定の振幅制約の下での実現とを区別する．第\ref{subsec:triangle}節では，この違いを厳密な閾値によって示す．
+
+原始の最小ノルムは商ノルムの一例である．例えば Gersten の境界ノルムは，指定した境界を持つ鎖の $\ell^1$ ノルムを最小化する\cite[Definition~2.53 and Remark~2.54]{Calegari}．本稿の原始ノルムは確率重み付き $\ell^\infty$ ノルムであり，極限で得られる商は相対複体の連結準同型を通じて定まる．もとのコサイクルと同じ次数における代表のノルムを最小化する定義ではない．
+
+本稿では，同時状態空間の支持と局所座標の確率重みをともに保持する．支持は増大複体とそのコホモロジーを定める．全支持を持つ基準法則は，もとの支持に含まれない座標を通じて障害を解消するために必要な量を測るノルムを与える．この二つの構造を，有限次元の初等的な最小化によって結び付ける．
+
+主結果は，定理\ref{thm:reciprocal}の厳密な逆数則，定理\ref{thm:relative}の相対単位球表示，定理\ref{thm:restriction}の非拡大的な比較である．相対的な記述によって，障害ノルムは連結準同型から誘導される商ノルムと同定される．また，大域的な次数 $-1$ のコホモロジーの像でさらに割る必要がある零次と，連結準同型が同型となる正の次数とが区別される．得られるノルムは，生成された観測族，支持，基準法則のみに依存する．命題\ref{prop:common-scale}では，共通の退化尺度を持つ非アフィン重みに対して極限係数を拡張する．
+
+本稿で用いる複体，連結準同型，細分ホモトピー，商ノルムの原理は標準的なものである．本稿の貢献は，これらを，指定した支持と確率重みを持つ有限周辺化複体に統合して適用する点にある．支持境界での厳密な係数には相対単位球による表示があり，この表示は支持拡大および観測制限と両立する．すべての空間は実数体 $\R$ 上有限次元とする．零次の原始問題は条件付き予測の延長を表し，一次では指定した局所的不整合の補正を表す．高次数の原始は余鎖として扱う．
+
+\section{有限周辺化複体}\label{sec:complex}
+$I=\{1,\ldots,d\}$ とし，各 $E_i$ を空でない有限集合，$E=\prod_{i\in I}E_i$ とする．支持は空でない部分集合 $S\subseteq E$ とする．$A\subseteq I$ に対し $E_A=\prod_{i\in A}E_i$ と書き，$S_A$ を $S$ の $E_A$ への射影とし，$W_A(S)=\R^{S_A}$ とおく．これらのベクトルを符号付き測度と解釈する．空観測の状態は一つであり，$W_\varnothing(S)=\R$ である．
+
+$A\subseteq B$ に対する周辺化を
+\begin{equation}\label{eq:marginal}
+ (L_{A\leftarrow B}x)(a)=\sum_{\substack{b\in S_B\\b|_A=a}}x(b).
+\end{equation}
+で定める．これらの写像は推移的に合成する．$K=\{0,\ldots,r-1\}$ とし，$I$ の部分集合からなる空でない有限順序付きリスト $\M=(M_i)_{i\in K}$ を固定する．重複および極大でない観測も許す．このリストが生成する下方閉な族は
+\[
+ \langle\M\rangle=\OO=\bigcup_{i\in K}2^{M_i}.
+\]
+である．空でない $J\subseteq K$ に対し $M_J=\bigcap_{i\in J}M_i$ とおく．
+
+増大交代 {\latinfont\v{C}ech} 複体を
+\begin{equation}\label{eq:complex}
+ C_S^{-1}(\M)=\R^S,\qquad
+ C_S^n(\M)=\prod_{i_0<\cdots<i_n}W_{M_{\{i_0,\ldots,i_n\}}}(S)\quad(n\ge0).
+\end{equation}
+と定める．次数 $-1$ 未満の項は零とする．空観測を含むすべての共通部分が寄与する．$J=(i_0<\cdots<i_{n+1})$ に対する微分は
+\begin{equation}\label{eq:delta}
+ (\delta x)_J=\sum_{k=0}^{n+1}(-1)^k
+ L_{M_J\leftarrow M_{J\setminus\{i_k\}}}x_{J\setminus\{i_k\}}.
+\end{equation}
+である．次数 $-1$ では各 $M_i$ への周辺化の族とする．推移性と対になる面の相殺から $\delta^2=0$ を得る．$Z^p(C)=\ker\delta^p$，$H^p(C)=Z^p(C)/\im\delta^{p-1}$ と書く．$S\subseteq T$ に沿う零による延長は周辺化と可換であり，単射な余鎖写像 $j_{S,T}:C_S\to C_T$ を定める．
+
+\begin{lemma}\label{lem:acyclic}
+任意の観測リストに対して，すべての $p\ge0$ で $H^p(C_E)=0$ が成り立つ．
+\end{lemma}
+\begin{proof}
+総質量が一の $e_i\in\R^{E_i}$ を選び，総質量写像の核を $V_i$ とする．各 $A$ に対して，分解 $\R^{E_i}=\R e_i\oplus V_i$ により，$\R^{E_A}$ は $B\subseteq A$ で添字付けられる成分の直和に分解する．各成分を $U_B=\bigotimes_{i\in B}V_i$ と同定し，$B$ の外の因子には $e_i$ を用いる．$U_\varnothing=\R$ とする．周辺化は，$B$ を保持する場合には $U_B$ 成分上で恒等写像となり，それ以外の場合にはその成分上で零となる．
+
+したがって複体は $B\subseteq I$ に沿って分解する．$B$ 成分の局所項は $K_B=\{i:B\subseteq M_i\}$ の空でない部分集合で添字付けられる．$K_B\ne\varnothing$ ならば，この成分は次数 $-1$ を含めて，定数係数 $U_B$ を持つ単体の増大余鎖複体である．頂点 $k\in K_B$ を固定し先頭に挿入すると，縮約が定まる．実際，重複添字の値を零とする交代延長によって $\delta h+h\delta=\id$ を得る．$k$ を除く項が恒等写像となり，ほかの項は対ごとに相殺する．$K_B=\varnothing$ ならば次数 $-1$ のみが残る．いずれの場合も非負次数のコホモロジーは消滅する．
+\end{proof}
+この証明の分解は符号付き測度の空間の分解であり，確率法則に独立性を仮定するものではない．
+
+$E$ 上で厳密に正の確率法則 $q$ に対して
+\begin{equation}\label{eq:weighted}
+ \norm{x}_{q,n}=\max_{|J|=n+1}\max_{a\in E_{M_J}}
+ \frac{|x_J(a)|}{q_{M_J}(a)}\quad(n\ge0),\qquad
+ \norm{x}_{q,-1}=\max_{z\in E}\frac{|x(z)|}{q(z)}.
+\end{equation}
+と定める．零次元の余鎖空間上のノルムは零とする．$x_A=q_A m_A$ と書くと，重み付きノルムは関数族 $m_A$ の最大絶対値と同定される．特に
+\[
+ L_{A\leftarrow I}(qm)=q_A\mathbb E_q[m\mid Z_A]
+\]
+は零次における条件付き予測の解釈を与える．ここで $Z_A$ は座標射影である．
+
+\section{厳密な逆数則}\label{sec:reciprocal}
+まず有限次元の最小化に関する議論を述べる．$J=J_0\sqcup J_1$ を有限集合，$B$ を有限次元空間，$A:\R^J\to B$ を線形写像とし，座標部分空間への制限を $A_0,A_1$ と書く．
+\begin{equation}\label{eq:weights}
+ w_j(\varepsilon)=
+ \begin{cases}
+ w_j^0+\varepsilon r_j,&j\in J_0,\quad w_j^0>0,\\
+ \varepsilon r_j,&j\in J_1,\quad r_j>0,
+ \end{cases}
+\end{equation}
+を仮定し，考察するパラメータではすべての重みが正であるとする．$J_0$ 上の係数 $r_j$ は負でもよい．固定した $b\in\im A$ に対して
+\begin{equation}\label{eq:minimum}
+ \Gamma_\varepsilon(b)=\min_{Ax=b}\max_{j\in J}\frac{|x_j|}{w_j(\varepsilon)}.
+\end{equation}
+とおく．空集合上の最大値は零とする．商写像を $\pi:B\to B/\im A_0$ とし，
+\begin{equation}\label{eq:coefficient}
+ \kappa(b)=\min_{\pi A_1v=\pi b}\max_{j\in J_1}\frac{|v_j|}{r_j}.
+\end{equation}
+と定める．どちらの最小値も達成される．実際，可行アフィン空間と，任意の可行点の値以下の劣位集合との共通部分は，空でないコンパクト集合である．
+
+\begin{theorem}\label{thm:reciprocal}
+$\kappa(b)>0$ と $b\notin\im A_0$ は同値である．$\kappa(b)>0$ ならば，十分小さいすべての正の $\varepsilon$ に対して
+\begin{equation}\label{eq:reciprocal}
+ \Gamma_\varepsilon(b)=\frac{\kappa(b)}{\varepsilon}
+\end{equation}
+が成り立つ．$\kappa(b)=0$ ならば
+\begin{equation}\label{eq:zero-limit}
+ \lim_{\varepsilon\downarrow0}\Gamma_\varepsilon(b)
+ =\min_{A_0u=b}\max_{j\in J_0}\frac{|u_j|}{w_j^0}.
+\end{equation}
+が成り立つ．さらに，$A_i^*$ を代数的な転置写像とすると，
+\begin{equation}\label{eq:dual}
+ \kappa(b)=\sup\left\{\langle a,b\rangle:a\in B^*,\ A_0^*a=0,
+ \ \sum_{j\in J_1}r_j|(A_1^*a)_j|\le1\right\}.
+\end{equation}
+を得る．
+\end{theorem}
+\begin{proof}
+\eqref{eq:coefficient}の可行性は $b\in\im A$ から従う．最小値の達成により，その値が零であることと $\pi b=0$ は同値である．$Ax=b$ の任意の解 $x=(x_0,x_1)$ は
+\[
+ \kappa(b)\le\max_{j\in J_1}|x_{1,j}|/r_j
+ \le\varepsilon\max_{j\in J}|x_j|/w_j(\varepsilon).
+\]
+を満たす．これが\eqref{eq:reciprocal}の下界を与える．\eqref{eq:coefficient}の最適解 $v$ を選び，$A_0u=b-A_1v$ を満たす $u$ を固定する．$(u,v)$ はすべてのパラメータで可行である．その $J_0$ 座標の重み付きノルムは零の近傍で有界に保たれる一方，$J_1$ 座標の重み付きノルムは $\kappa(b)/\varepsilon$ である．$\kappa(b)>0$ ならば，十分小さいパラメータで後者が前者以上となり，下界が達成される．
+
+$\kappa(b)=0$ の場合，$A_0u=b$ の最適解を零で延長すると，有界性と\eqref{eq:zero-limit}の上極限に関する不等式を得る．下極限を実現する列に沿って最適解 $x^\varepsilon$ を選ぶ．その $J_0$ 座標は有界であり，$J_1$ 座標は $O(\varepsilon)$ である．部分列極限は $A_0u=b$ を満たす．正の $J_0$ 重みの収束により逆向きの不等式を得る．
+
+最後に，コンパクトな対称凸集合
+\[
+ K=\{\pi A_1v:|v_j|\le r_j\}
+\]
+の支持関数は，$\ker A_0^*$ と同定された $B/\im A_0$ の双対上で $\sum_j r_j|(A_1^*a)_j|$ となる．$K$ の線形包上のゲージは\eqref{eq:coefficient}である．$K$ は $V=\im(\pi A_1)$ において原点の近傍を含み，$\pi b\in V$ である．有限次元の分離定理によって $V$ 上の極集合による表示を得る．$V$ 上の任意の汎関数は，$K$ 上の値を変えずに $B/\im A_0$ へ延長できる．したがって $V$ が真部分空間の場合も\eqref{eq:dual}が得られる．
+\end{proof}
+
+支持がちょうど $S$ である法則 $q_0$ と，$E$ 上で厳密に正の法則 $q_1$ を固定する．$q_0$ は $S$ の外で零とみなす．$q_\varepsilon=(1-\varepsilon)q_0+\varepsilon q_1$ とおく．固定したコサイクル $c\in Z^p(C_S)$，$p\ge0$ に対し，$j=j_{S,E}$ と書き，
+\begin{equation}\label{eq:primitive}
+ \Gamma_\varepsilon(c)=\min_{\delta x=jc}\norm{x}_{q_\varepsilon,p-1}.
+\end{equation}
+と定める．補題\ref{lem:acyclic}により可行集合は空でない．
+
+\begin{corollary}\label{cor:obstruction}
+$H^p(C_S)$ 上にノルム $N^p_{S,\M,q_1}$ が存在して
+\begin{equation}\label{eq:norm-limit}
+ N^p_{S,\M,q_1}([c])=\lim_{\varepsilon\downarrow0}\varepsilon\Gamma_\varepsilon(c).
+\end{equation}
+を満たす．$[c]\ne0$ ならば，十分小さいすべての正の $\varepsilon$ に対して $\Gamma_\varepsilon(c)=N^p_{S,\M,q_1}([c])/\varepsilon$ が成り立つ．このノルムは $S$ 上の $q_0$ の正の重みには依存しない．
+\end{corollary}
+\begin{proof}
+定理\ref{thm:reciprocal}を $A=\delta_E^{p-1}$，$b=jc$ に適用する．原始の座標を，対応する $S$ の射影内の座標と，その外の座標とに分ける．次数 $-1$ では分割 $S\sqcup(E\setminus S)$ である．第一の座標群の微分像は $j\im\delta_S^{p-1}$ であり，第二の座標群の重みは対応する $q_1$ の周辺確率のちょうど $\varepsilon$ 倍である．したがって $\kappa(jc)=0$ と $[c]=0$ は同値であり，$c$ を同じコホモロジー類のコサイクルに取り替えても値は変わらない．
+
+より正確には，$H^p(C_S)$ は $[c]\mapsto[jc]$ によって $C_E^p/\im A_0$ に埋め込まれ，その像は $\im(\pi A_1)$ に含まれる．したがって商ノルム\eqref{eq:coefficient}の制限は $H^p(C_S)$ 上のノルムとなる．その定義の重みは $q_1$ のみを用いる．定理\ref{thm:reciprocal}の正の場合と零の場合から，\eqref{eq:norm-limit}と主張の等式が従う．
+\end{proof}
+
+\begin{proposition}\label{prop:support}
+$S\subseteq T$，固定した $\M,q_1$，$p\ge0$ に対して
+\begin{equation}\label{eq:support}
+ N^p_{T,\M,q_1}(j_{S,T*}\alpha)\le N^p_{S,\M,q_1}(\alpha).
+\end{equation}
+が成り立つ．
+\end{proposition}
+\begin{proof}
+$S$ を $T$ に置き換えると，\eqref{eq:coefficient}の第一の座標群が増える．$S$ に対する第二の座標群上の可行ベクトルを，$T$ の外に残る座標と，新たに $T$ に含まれる座標とに分ける．後者の微分は $T$ に対する第一の座標群の像に含まれるため，前者は $T$ に対する商方程式を満たす．その重み付き最大値は増加しない．最小値を取ると\eqref{eq:support}を得る．
+\end{proof}
+以上の主張ではコサイクルを固定している．例えば $c$ を $\varepsilon c$ に置き換えると，斉次性によって逆数型の発散が相殺される．アフィン性の仮定は次のように緩められる．
+
+\subsection{共通の退化尺度を持つ非アフィン重み}
+\begin{proposition}\label{prop:common-scale}
+上記の有限座標分割 $J=J_0\sqcup J_1$，線形写像 $A$，固定したベクトル $b\in\im A$ を保つ．\eqref{eq:weights}を，正の重みに関する条件
+\begin{equation}\label{eq:common-scale}
+ w_j(\varepsilon)\longrightarrow w_j^0>0\quad(j\in J_0),\qquad
+ \frac{w_j(\varepsilon)}{t(\varepsilon)}\longrightarrow r_j>0\quad(j\in J_1),
+\end{equation}
+に置き換える．ここで $t(\varepsilon)>0$ かつ $\varepsilon\downarrow0$ のとき $t(\varepsilon)\to0$ とする．$\Gamma_\varepsilon(b)$ を\eqref{eq:minimum}で，$\kappa(b)$ をこれらの $r_j$ を用いた\eqref{eq:coefficient}で定めると，
+\begin{equation}\label{eq:rescaled-limit}
+ \lim_{\varepsilon\downarrow0}t(\varepsilon)\Gamma_\varepsilon(b)=\kappa(b).
+\end{equation}
+が成り立つ．$\kappa(b)=0$ ならば，尺度を掛けない極限は\eqref{eq:zero-limit}の最小値である．$\kappa(b)>0$ で，すべての $j\in J_1$ と十分小さいすべてのパラメータに対して $w_j(\varepsilon)=t(\varepsilon)r_j$ が成り立つならば，十分小さいすべての正の $\varepsilon$ に対して
+\[
+ \Gamma_\varepsilon(b)=\kappa(b)/t(\varepsilon)
+\]
+が成り立つ．
+\end{proposition}
+\begin{proof}
+$t=t(\varepsilon)$ とし，
+\[
+ \eta_\varepsilon=\max_{j\in J_1}
+ \left|\frac{w_j(\varepsilon)}{t r_j}-1\right|,
+\]
+とおく．空集合上の最大値は零とする．有限性から $\eta_\varepsilon\to0$ である．任意の可行な $x=(x_0,x_1)$ は
+\[
+ \kappa(b)\le\max_{j\in J_1}|x_{1,j}|/r_j
+ \le t(1+\eta_\varepsilon)\max_{j\in J}|x_j|/w_j(\varepsilon).
+\]
+を満たす．\eqref{eq:coefficient}の最適解 $v$ を選び，$A_0u=b-A_1v$ を満たす $u$ を固定する．$M_\varepsilon=\max_{j\in J_0}|u_j|/w_j(\varepsilon)$ とおけば，これは有界に保たれる．$\eta_\varepsilon<1$ のとき，$(u,v)$ の可行性から
+\[
+ \frac{\kappa(b)}{1+\eta_\varepsilon}
+ \le t\Gamma_\varepsilon(b)
+ \le\max\left\{tM_\varepsilon,\frac{\kappa(b)}{1-\eta_\varepsilon}\right\}.
+\]
+を得る．これが\eqref{eq:rescaled-limit}を示す．新座標の重みが正確に $tr_j$ ならば，$tM_\varepsilon\le\kappa(b)>0$ となった時点で上下界が一致するため，十分小さいパラメータでの等式が従う．
+
+$\kappa(b)=0$ の場合，旧座標上の最適解を零で延長すると，\eqref{eq:zero-limit}の上極限の上界を得る．下極限を実現する列に沿った最適解は，旧座標が有界で新座標が $O(t)$ である．したがって収束部分列の極限は $A_0u=b$ を満たし，旧重みの収束から逆向きの不等式を得る．上記の規約により，座標群が空の場合も含まれる．
+\end{proof}
+
+周辺化複体について，$\widetilde q_\varepsilon$ を全支持を持つ法則とし，$\widetilde q_\varepsilon\to q_0$ が各点で成り立ち，さらに
+\[
+ \widetilde q_\varepsilon(z)/t(\varepsilon)\longrightarrow q_1(z)
+ \quad(z\in E\setminus S),
+\]
+を仮定する．ここで $q_0,q_1,S$ は系\ref{cor:obstruction}と同じものとする．\eqref{eq:primitive}の $q_\varepsilon$ を $\widetilde q_\varepsilon$ に置き換えて $\widetilde\Gamma_\varepsilon(c)$ を定めると，
+\begin{equation}\label{eq:nonaffine-marginal}
+ t(\varepsilon)\widetilde\Gamma_\varepsilon(c)
+ \longrightarrow N^p_{S,\M,q_1}([c]).
+\end{equation}
+が成り立つ．実際，$S$ の射影の外にある原始の各座標の重みは，$S$ の外の状態確率の有限和であるため，尺度で割った重みは対応する $q_1$ の周辺確率へ収束する．旧座標の重みは正の極限を持つので，命題\ref{prop:common-scale}を適用できる．すべての $z\notin S$ と十分小さいすべてのパラメータで $\widetilde q_\varepsilon(z)=t(\varepsilon)q_1(z)$ が成り立つならば，$[c]\ne0$ のとき，十分小さいパラメータで $\widetilde\Gamma_\varepsilon(c)=N^p_{S,\M,q_1}([c])/t(\varepsilon)$ となる．
+
+漸近的な比例関係だけでは厳密な等式は得られない．$A=\id_{\R}$，$b=1$，$J_0=\varnothing$，$w(\varepsilon)=\varepsilon(1+\varepsilon)$ の場合，$\kappa=1$ かつ $\Gamma_\varepsilon=1/[\varepsilon(1+\varepsilon)]$ である．したがって $\varepsilon\Gamma_\varepsilon\to1$ だが，$\Gamma_\varepsilon\ne1/\varepsilon$ である．
+
+\paragraph{複数の退化尺度．}
+新座標の重みが，$a_j,\beta_j>0$ および互いに異なる指数に対して $w_j(\varepsilon)\sim a_j\varepsilon^{\beta_j}$ を満たす場合，主要項の指数と係数を記述することが次の問題である．線形代数の水準では，$\im A_0$ を法として $b$ を実現できる座標部分空間の像が，指数によって順序付けられる．確率法則の族では原始の重みは周辺確率なので，その指数をまず状態確率の和から求める必要がある．この像の列が最小値の主要項をどう決定するかは，上記の共通尺度の結果の範囲外である．
+
+\section{相対コホモロジーと障害単位球}\label{sec:relative}
+$Q=C_E/jC_S$ とおく．この商は，$S$ の射影の外にある局所座標からなる標準的な座標表示を持つ．次数 $-1$ では $E\setminus S$ である．各座標に対応する $q_1$ の周辺重み $r_\ell>0$ を与え，重み付き最大ノルムを $\norm{\cdot}_{q_1,\mathrm{new}}$ と書く．
+
+$v\in Z^{p-1}(Q)$ に対して持ち上げ $\bar v\in C_E^{p-1}$ を選ぶ．$\delta_E\bar v\in jC_S^p$ であるため，連結準同型は
+\begin{equation}\label{eq:connecting}
+ \partial[v]=[j^{-1}\delta_E\bar v]\in H^p(C_S).
+\end{equation}
+で与えられる．持ち上げに $jy$ を加えると，この代表には $\delta_Sy$ が加わる．また $v$ に相対余境界を加えても類は変わらない．これは通常の長完全列の連結準同型である\cite[Tag~0117]{Stacks}．
+
+\begin{theorem}\label{thm:relative}
+$p\ge0$ に対し，$\partial:H^{p-1}(Q)\to H^p(C_S)$ は全射であり，
+\begin{equation}\label{eq:relative-norm}
+ N^p_{S,\M,q_1}(\alpha)=
+ \min\{\norm{v}_{q_1,\mathrm{new}}:v\in Z^{p-1}(Q),\ \partial[v]=\alpha\}.
+\end{equation}
+が成り立つ．特に，単位球は中心対称な凸多面体
+\begin{equation}\label{eq:ball}
+ B_N=\{\partial[v]:\delta_Qv=0,\ |v_\ell|\le r_\ell\}.
+\end{equation}
+である．
+\end{theorem}
+\begin{proof}
+$c\in Z^p(C_S)$ に対し，補題\ref{lem:acyclic}から $\delta_Ex=jc$ を満たす $x$ が存在する．その相対像は $[c]$ に写るコサイクルであるから，全射性が従う．
+
+系\ref{cor:obstruction}の座標分割を用いる．第二の座標群上のベクトル $v$ に対して，\eqref{eq:coefficient}の商方程式は
+\begin{equation}\label{eq:quotient-condition}
+ jc-A_1v\in\im A_0=j\im\delta_S^{p-1}.
+\end{equation}
+と同値である．これから $A_1v\in jC_S^p$，したがって $\delta_Qv=0$，さらに $\partial[v]=[c]$ を得る．逆に，この二条件から\eqref{eq:quotient-condition}が従う．可行集合が一致するため，重み付き最小値も一致する．
+
+相対コサイクル空間と重み付きの箱との共通部分は，コンパクトで中心対称な凸多面体である．写像 $v\mapsto\partial[v]$ によるその像が\eqref{eq:ball}である．最小値の達成を含む\eqref{eq:relative-norm}から，これがノルム単位球と同定される．
+\end{proof}
+
+\begin{corollary}\label{cor:relative-isometry}
+$H^{p-1}(Q)$ に，閉じた代表にわたって $\norm{v}_{q_1,\mathrm{new}}$ を最小化する商ノルムを与える．$p\ge1$ ならば，連結準同型は $(H^p(C_S),N^p_{S,\M,q_1})$ への等長同型である．$p=0$ ならば，さらに商ノルムを与えた空間からの等長同型
+\[
+ H^{-1}(Q)/\im\bigl(H^{-1}(C_E)\to H^{-1}(Q)\bigr)
+ \longrightarrow (H^0(C_S),N^0_{S,\M,q_1}),
+\]
+を誘導する．
+\end{corollary}
+\begin{proof}
+$\partial$ の核は $H^{p-1}(C_E)$ の像である．実際，$\partial[v]=0$ ならば $\delta_E\bar v=j\delta_Sy$ を満たす $y$ を選べる．このとき $\bar v-jy$ は同じ相対類の閉じた持ち上げである．逆に，閉じた持ち上げの連結像は零である．$p\ge1$ ならば補題\ref{lem:acyclic}によってこの核は零となる．$p=0$ では消滅するとは限らない．代表と核にわたって順に最小化すると，\eqref{eq:relative-norm}から主張のノルムが得られる．有限次元性によって，関係する部分空間はすべて閉である．
+\end{proof}
+
+\section{観測制限と支持拡大}\label{sec:comparison}
+$\langle\mathcal N\rangle\subseteq\langle\M\rangle$ を満たす別の有限順序付き観測リスト $\mathcal N=(N_a)_{a\in L}$ を考える．$N_a\subseteq M_{f(a)}$ を満たす $f:L\to K$ を選ぶ．標準的な交代 {\latinfont\v{C}ech} の規約に従い，交代余鎖を符号によって任意の順序付き添字列へ延長し，重複添字の値を零とする\cite[Tag~01FG]{Stacks}．$J=\{a_0,\ldots,a_n\}$ に対して $N_J=\bigcap_{a\in J}N_a$ とおき，
+\begin{equation}\label{eq:restriction}
+ (F_f^nx)_{a_0\ldots a_n}
+ =L_{N_J\leftarrow\bigcap_{a\in J}M_{f(a)}}x_{f(a_0)\ldots f(a_n)},
+ \qquad F_f^{-1}=\id.
+\end{equation}
+と定める．
+
+\begin{theorem}\label{thm:restriction}
+$F_f$ は余鎖写像であり，支持の零による延長と可換である．全支持を持つ任意の法則 $q$ に対し，\eqref{eq:weighted}について非拡大的である．異なる $f$ の選択は，同じコホモロジー写像 $F_*$ を誘導する．$p\ge0$ に対して
+\begin{equation}\label{eq:contraction}
+ N^p_{S,\mathcal N,q_1}(F_*\alpha)\le N^p_{S,\M,q_1}(\alpha).
+\end{equation}
+が成り立つ．
+\end{theorem}
+\begin{proof}
+周辺化の推移性から，項ごとに $\delta F_f=F_f\delta$ を得る．選択添字が重複する場合，重複した添字を除く二項が相殺する．同じ周辺化の恒等式により，増大および零による延長とも可換になる．
+
+$A\subseteq B$ に対して，$|x_B(b)|\le\lambda q_B(b)$ ならば
+\begin{equation}\label{eq:box-contraction}
+ |L_{A\leftarrow B}x_B(a)|\le\sum_{b|_A=a}|x_B(b)|\le\lambda q_A(a).
+\end{equation}
+となる．\eqref{eq:restriction}の各成分は一つの周辺化だけを用いるため，非拡大性が従う．
+
+選択 $f,g$ と $n\ge1$ に対し，増大添字列上で
+\begin{equation}\label{eq:homotopy}
+ (H^nx)_{a_0\ldots a_{n-1}}=
+ \sum_{k=0}^{n-1}(-1)^k L_{N_J\leftarrow B_k}
+ x_{f(a_0)\ldots f(a_k)g(a_k)\ldots g(a_{n-1})},
+\end{equation}
+と定める．ここで $B_k$ は対応する添字列に現れる観測の共通部分，$J=\{a_0,\ldots,a_{n-1}\}$ とする．$N_J\subseteq B_k$ が成り立つ．$H^0=0$ とおく．$\delta H+H\delta$ を展開すると内部の項はすべて相殺し，端の項が $F_g-F_f$ を与える．零次では
+\[
+ (H^1\delta x)_a=L_{N_a\leftarrow M_{g(a)}}x_{g(a)}
+ -L_{N_a\leftarrow M_{f(a)}}x_{f(a)}.
+\]
+である．次数 $-1$ では両写像が恒等写像となる．したがって誘導されるコホモロジー写像は一致する．これは標準的な細分ホモトピー\cite[Proposition~6.10 and Theorem~6.30]{BPSV}を，係数写像を明示して書いたものである．
+
+$\delta x=jc$ ならば $\delta F_fx=jF_fc$ である．非拡大性から，$F_fc$ の原始の最小ノルムは $c$ のもの以下となる．$\varepsilon$ を掛けて\eqref{eq:norm-limit}を適用すると\eqref{eq:contraction}を得る．
+\end{proof}
+
+\begin{corollary}\label{cor:list}
+$\langle\M\rangle=\langle\mathcal N\rangle$ ならば，$F_*$ は障害ノルムに関する等長同型である．したがってこのノルムを $N^p_{S,\OO,q_1}$ と書ける．
+\end{corollary}
+\begin{proof}
+両方向の写像を選ぶ．その合成は恒等包含に対する許容される選択であり，恒等写像を与える選択とホモトピックである．したがってコホモロジー上で互いに逆の写像を誘導する．両方向に\eqref{eq:contraction}を適用するとノルムの一致を得る．
+\end{proof}
+これは類のノルムに関する等長性であり，異なる表示の任意の代表について，有限パラメータでの原始最小値が一致するという主張ではない．
+
+\begin{theorem}\label{thm:functor}
+$E,q_1$ と $p\ge0$ を固定する．対 $(S,\OO)$ の間に，$S\subseteq T$ かつ $\OO'\subseteq\OO$ のとき射 $(S,\OO)\to(T,\OO')$ を定める．このとき
+\[
+ (S,\OO)\longmapsto\bigl(H^p(C_S(\OO)),N^p_{S,\OO,q_1}\bigr)
+\]
+は，有限次元実ノルム空間と線形非拡大写像の圏への関手を定める．表示の固定には，$2^I$ 上の固定した全順序に従って並べた極大観測リストを用いる．
+\end{theorem}
+\begin{proof}
+命題\ref{prop:support}により支持拡大は非拡大的であり，定理\ref{thm:restriction}により観測制限も非拡大的である．両者は余鎖の水準で可換である．選択写像の合成は包含の合成と一致し，誘導されるコホモロジー写像は選択によらない．したがって恒等射と合成に関する条件が成り立つ．系\ref{cor:list}によって，ほかの生成リストも等長に同定される．
+\end{proof}
+
+\begin{proposition}\label{prop:reference}
+全支持を持つ二つの法則が，$0<a\le b<\infty$ に対して各点で $a q_1\le q'_1\le b q_1$ を満たすならば，
+\[
+ b^{-1}N^p_{S,\OO,q_1}(\alpha)
+ \le N^p_{S,\OO,q'_1}(\alpha)
+ \le a^{-1}N^p_{S,\OO,q_1}(\alpha).
+\]
+が成り立つ．
+\end{proposition}
+\begin{proof}
+すべての周辺確率にも同じ不等式が成り立つ．\eqref{eq:relative-norm}の可行集合は変わらず，各可行ベクトルのノルムは記載した定数倍の間に挟まれる．最小値を取ればよい．
+\end{proof}
+
+\section{二値モデルの例}\label{sec:examples}
+\subsection{零次における非自明な核}
+$E=\{-1,1\}^2$，$S=\{(-1,-1),(1,1)\}$，$\M=(\{1\},\{2\})$ とする．両局所支持が全状態を含むため，$Q$ は次数 $-1$ に集中し，座標は $(+,-)$ と $(-,+)$ である．$q_1$ を一様分布とすると，両相対座標の重みは $1/4$ となる．
+
+$h(-1)=-1$，$h(1)=1$ とし，$c=(h,0)\in Z^0(C_S)$ とおく．零次の整合性は総質量の一致であるが，対角支持上での延長可能性には二つの周辺測度全体の一致が必要である．したがって $H^0(C_S)$ は $[c]$ を基底とする一次元空間である．相対座標 $(s,t)$ に対する二つの周辺測度の差は $(s-t)h$ であり，
+\[
+ \partial(s,t)=(s-t)[c],\qquad\ker\partial=\{(t,t):t\in\R\}.
+\]
+となる．この核は，対角成分が $-t$，非対角成分が $t$ である符号付き測度の相対像である．その二つの周辺測度はいずれも零である．
+
+\begin{proposition}
+この例では $N(a[c])=2|a|$ であり，障害単位球は $\{a[c]:|a|\le1/2\}$ である．
+\end{proposition}
+\begin{proof}
+定理\ref{thm:relative}から $N(a[c])=\min_{s-t=a}4\max\{|s|,|t|\}$ を得る．$|a|\le|s|+|t|$ より下界は $2|a|$ であり，$(s,t)=(a/2,-a/2)$ で達成される．
+\end{proof}
+$q_0$ を $S$ 上の一様分布とすると，$c$ の原始として，$(++,+-,-+,--)$ の順に成分 $(1/2,1/2,-1/2,-1/2)$ を持つものが取れる．$0<\varepsilon\le1$ における $q_\varepsilon$ に関するノルムは $\max\{2/(2-\varepsilon),2/\varepsilon\}=2/\varepsilon$ であり，相対的な下界と一致する．どちらか一つの観測へ制限すると障害群は消滅する．
+
+\subsection{一次の補正ノルムの鋭い評価}\label{subsec:triangle}
+$E=\{-1,1\}^3$ とし，$S_\Delta$ を三座標がすべて等しい二状態の集合とする．$q_0$ は $S_\Delta$ 上の一様分布，$q_1$ は $E$ 上の一様分布とする．$ij=\{i,j\}$ と書き，観測の順序を $(12,23,13)$ とする．二座標の周辺確率は
+\[
+ q_{\varepsilon,ij}(a,b)=\frac{1+(1-\varepsilon)ab}{4}.
+\]
+である．一次の因子を $W_{\{2\}}\oplus W_{\{1\}}\oplus W_{\{3\}}$ の順に並べると，最初の二つの微分は
+\begin{align*}
+ \delta_0x&=(L_2x_{23}-L_2x_{12},\ L_1x_{13}-L_1x_{12},\ L_3x_{13}-L_3x_{23}),\\
+ \delta_1(a,b,c)&=\sum c-\sum b+\sum a,
+\end{align*}
+となる．$L_i$ は座標 $i$ への周辺化を表す．$h(-1)=-1$，$h(1)=1$ とし，$c=(h,0,0)$ とおくと，これは閉じている．対角支持上で，各二座標の係数を $\{-1,1\}$ 上のベクトルと同定する．余境界は $(x_1-x_0,x_2-x_0,x_2-x_1)$ の形を持つため，交代和は零である．$c$ の交代和は $h$ なので $[c]\ne0$ である．
+
+$\varepsilon>0$ に対して $x_{ij}=q_{\varepsilon,ij}m_{ij}$ と書き，$\delta_0x=c$ の下で三つの $\norm{m_{ij}}_\infty$ の最大値を最小化する．
+\begin{proposition}\label{prop:triangle}
+最小値は
+\begin{equation}\label{eq:triangle}
+ \Gamma_\varepsilon(c)=\max\left\{1,\frac{2}{3\varepsilon}\right\},
+ \qquad 0<\varepsilon\le1.
+\end{equation}
+である．
+\end{proposition}
+\begin{proof}
+可行な族のノルムが $\lambda$ 以下とする．$\sum_z zh(z)=2$ より，座標の符号関数に対するモーメントは，$x_{12}$ について $(a,b)$，$x_{23}$ について $(b+2,t)$，$x_{13}$ について $(a,t)$ となる．各モーメントの絶対値は $\lambda$ 以下なので $2\le2\lambda$ を得る．また $\mathbb E_{q_\varepsilon}|Z_i-Z_j|=\varepsilon$ より
+\[
+ |a-b|\le\varepsilon\lambda,\qquad
+ |b+2-t|\le\varepsilon\lambda,\qquad
+ |t-a|\le\varepsilon\lambda.
+\]
+となる．三つの差の符号を保った和は $2$ なので，$\lambda\ge2/(3\varepsilon)$ を得る．
+
+下界を達成するため，$\rho=1-\varepsilon$ とおき，
+\[
+ m_{u,v}(z,z')=\frac{uz+vz'}{1+\rho zz'}.
+\]
+と定める．対応する符号付き測度は $(uz+vz')/4$ であり，総質量は零，モーメントは $(u,v)$ である．そのノルムは
+\[
+ \max\left\{\frac{|u+v|}{2-\varepsilon},\frac{|u-v|}{\varepsilon}\right\}.
+\]
+となる．$0<\varepsilon\le2/3$ では，$(12,23,13)$ の順にモーメントの対を
+\[
+ (-1/3,-1),\qquad (1,1/3),\qquad(-1/3,1/3)
+\]
+と選ぶ．最大ノルムは $2/(3\varepsilon)$ である．$2/3\le\varepsilon\le1$ では，代わりに
+\[
+ (-\rho,-1),\qquad(1,\rho),\qquad(-\rho,\rho).
+\]
+を選ぶ．最初の二つのノルムは $1$，第三のノルムは $2\rho/\varepsilon\le1$ である．いずれも必要な周辺化方程式を満たす．実際，一座標の符号付き測度は総質量と符号モーメントで決まり，構成した測度の総質量はすべて零である．したがって各区間で下界が達成される．
+\end{proof}
+障害係数は $N([c])=2/3$ である．全支持ではすべての $\varepsilon>0$ に対して $H^1$ が消滅する一方，ノルムが一以下の原始が存在するのは $\varepsilon\ge2/3$ の場合に限られる．二観測リスト $(12,23)$ への制限によって一次への微分は全射となり，この類は零に写る．データ $c$ は指定された符号付きの不整合であり，一つの大域的な予測対象の整合した条件付き平均の族ではない．
+
+\section{結論}
+障害ノルムは，指定した支持上のコホモロジーと，支持制約を緩めた後の周辺化原始問題を解くために必要な量を結び付ける．固定した非零障害と，全支持を持つ基準法則とのアフィン混合に対して，原始の最小重み付きノルムは，十分小さいすべての正のパラメータで，障害ノルムを混合パラメータで割った値に一致する．相対複体による記述は，単位球を，重み付き座標の箱と相対コサイクル空間の共通部分の連結像として同定する．
+
+これらのノルムは，生成観測リストの変更に対して不変であり，支持拡大および観測制限に対して非増加である．したがってコホモロジー的な障害とその定量的な大きさを，同じ写像によって比較できる．二値モデルの例は，線形的な可解性と，指定した各点での上界の下での可解性を区別し，零次で必要となる追加の商を具体化する．
+
+共通尺度への拡張は，極限係数を得るためにアフィン混合が十分条件ではあるが必要条件ではないことを示す．新たに利用できる座標の重みが，共通の正の尺度と固定重みの積に漸近するならば，尺度を掛けた最小値は同じ商ノルムへ収束する．これらの座標で比例関係が厳密に成り立てば，旧重みが非アフィンに変化しても，十分小さいパラメータで等式が成立する．データは引き続き固定する．異なる退化尺度の場合と，二次以上における順序複体表示とのノルムを保存する比較が，今後の課題として残る．
+
+\appendix
+\section{順序複体表示との比較}\label{app:order}
+下方閉な族 $\OO$ に対して $D_S^{-1}=\R^S$ とし，
+\[
+ D_S^n=\prod_{A_0\subsetneq\cdots\subsetneq A_n\text{ in }\OO}W_{A_0}(S)\quad(n\ge0).
+\]
+と定める．微分は
+\begin{equation}\label{eq:order-differential}
+ (d x)_{A_0\ldots A_{n+1}}
+ =L_{A_0\leftarrow A_1}x_{A_1\ldots A_{n+1}}
+ +\sum_{i=1}^{n+1}(-1)^i x_{A_0\ldots\widehat A_i\ldots A_{n+1}},
+\end{equation}
+であり，増大はすべての周辺化写像からなる．補題\ref{lem:acyclic}のテンソル分解が適用できる．$U_B$ 成分は $\{A\in\OO:B\subseteq A\}$ 内の鎖に支持される．空でない場合，この半順序集合は最小元 $B$ を持ち，増大定数係数複体はこの元を挿入することで縮約される．空の場合は次数 $-1$ のみが残る．したがって $p\ge0$ に対し $H^p(D_E)=0$ である．鎖上の係数に重み $q_{A_0}$ を与え，\eqref{eq:norm-limit}と同じ最小化と極限によって障害ノルム $N^{p,D}$ を定める．
+
+$\mathcal U$ を，包含関係を拡張する順序で $\OO$ の各元を一度ずつ並べたリストとする．包含鎖となる添字列への制限は，非拡大的な余鎖写像 $R:C_S(\mathcal U)\to D_S(\OO)$，$R^{-1}=\id$ を定める．実際，その共通部分は $A_0$ であり，両微分は一致する．
+
+\begin{proposition}\label{prop:order}
+$p=0,1$ では $R$ は同型を誘導し，
+\[
+ N^{p,D}_{S,\OO,q_1}(R_*\alpha)=N^p_{S,\OO,q_1}(\alpha).
+\]
+が成り立つ．任意の $p\ge0$ で $R_*$ は非拡大的である．
+\end{proposition}
+\begin{proof}
+零次の余鎖空間は一致する．$A\cap B\in\OO$ なので，すべての包含に関する一致と，すべての共通部分に関する一致は同値である．増大も一致する．したがってコサイクル空間と，可行な大域的原始の集合がともに一致する．
+
+$D_S$ の一次コサイクル $u$ に対して
+\begin{equation}\label{eq:inverse}
+ x_{A,B}=u_{A\cap B,B}-u_{A\cap B,A},\qquad u_{A,A}=0.
+\end{equation}
+とおく．$T\subseteq A\subseteq B$ に沿うコサイクル恒等式は $u_{T,B}=u_{T,A}+L_{T\leftarrow A}u_{A,B}$ である．$T=A\cap B\cap C$ に対して，この恒等式から
+\[
+ L_{T\leftarrow A\cap B}x_{A,B}=u_{T,B}-u_{T,A}.
+\]
+を得る．したがって $(\delta x)_{A,B,C}$ に現れる三つの差は相殺する．一部の包含が等号となる場合も含め，\eqref{eq:inverse}が {\latinfont\v{C}ech} コサイクルであることが示された．$A\subsetneq B$ ならば $x_{A,B}=u_{A,B}$ である．逆に，$(A\cap B,A,B)$ 上の {\latinfont\v{C}ech} 恒等式から\eqref{eq:inverse}を得る．ゆえに $R$ は一次コサイクル上で全単射である．零次では恒等写像なので，余境界も対応する．
+
+全支持上では，一次コサイクル上の単射性から，同じ零次余鎖 $y$ に対して方程式 $dy=Rjc$ と $\delta y=jc$ は同値となる．その重み付きノルムは同一である．したがって零次・一次の原始の最小値は，すべての正のパラメータで一致する．極限を取り，系\ref{cor:list}を用いると，任意の生成リストについて主張の等長性を得る．任意の次数では，原始に非拡大写像 $R$ を適用して極限を取ることにより，一方向の不等式が従う．
+\end{proof}
+
+\paragraph{高次数における定量的な問題．}
+低次数の議論では，$p=0$ について同一の大域的原始空間を，$p=1$ について同一の零次原始空間を比較した．$p\ge2$ では，原始空間 $C_E^{p-1}(\mathcal U)$ と $D_E^{p-1}(\OO)$ は一般に異なる．前者には比較不能な観測の添字列が含まれるが，後者には含まれない．制限は引き続き非拡大的であるが，逆向きの不等式には，指定された微分を持つ順序複体の原始を，最適な重み付きノルムを増加させずに持ち上げる議論が必要となる．代数的なホモトピー同値だけでは，この評価は得られない．
+
+特に，再構成の公式は周辺化の和を含み得る．各周辺化が非拡大的であっても，和に対する三角不等式では定数一が得られるとは限らない．また，\eqref{eq:inverse}が再構成するのは閉じた一次余鎖である．非零の二次コサイクルの一次原始は閉じていないため，この公式によって $p=2$ へ直接証明を拡張することはできない．したがって，ノルムを制御した持ち上げ，あるいは最小値の逆向き不等式の別証明が必要である．これらは現在の証明の限界を述べるものであり，高次数の等長性が成り立たないことを示すものではない．
+
+\latinfont
+\begin{thebibliography}{9}
+\bibitem{AB}
+S.~Abramsky and A.~Brandenburger,
+The sheaf-theoretic structure of non-locality and contextuality,
+\emph{New Journal of Physics} \textbf{13} (2011), no.~11, 113036.
+\href{https://doi.org/10.1088/1367-2630/13/11/113036}{doi:10.1088/1367-2630/13/11/113036}.
+
+\bibitem{BPSV}
+D.~Bennequin, O.~Peltre, G.~Sergeant-Perthuis, and J.~P.~Vigneaux,
+Extra-fine sheaves and interaction decompositions,
+preprint, 2020, \href{https://arxiv.org/abs/2009.12646v2}{arXiv:2009.12646v2}.
+
+\bibitem{Calegari}
+D.~Calegari,
+\emph{scl}, MSJ Memoirs, vol.~20,
+Mathematical Society of Japan, 2009.
+\href{https://math.uchicago.edu/~dannyc/books/scl/scl.html}{Author's book page}.
+
+\bibitem{Peltre}
+O.~Peltre,
+Local max-entropy and free energy principles, belief diffusions and their singularities,
+preprint, 2023, \href{https://arxiv.org/abs/2310.02946v1}{arXiv:2310.02946v1}.
+
+\bibitem{Robinson}
+M.~Robinson,
+Assignments to sheaves of pseudometric spaces,
+\emph{Compositionality} \textbf{2} (2020), article~2.
+\href{https://doi.org/10.32408/compositionality-2-2}{doi:10.32408/compositionality-2-2}.
+
+\bibitem{Stacks}
+The Stacks Project Authors,
+\emph{The Stacks Project},
+\href{https://stacks.math.columbia.edu/tag/0117}{Tag~0117} and
+\href{https://stacks.math.columbia.edu/tag/01FG}{Tag~01FG}, accessed 13 September 2026.
+\end{thebibliography}
+\end{document}
