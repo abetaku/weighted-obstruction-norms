@@ -9,7 +9,7 @@ Takuya Abe
 
 | 論文 | PDF | TeX |
 | --- | --- | --- |
-| 日本語 | [読む](paper/weighted_obstruction_norms_ja.pdf) | [ソース](paper/weighted_obstruction_norms_ja.tex) |
+| 日本語 | [Read](paper/weighted_obstruction_norms_ja.pdf) | [Source](paper/weighted_obstruction_norms_ja.tex) |
 | English | [Read](paper/weighted_obstruction_norms_en.pdf) | [Source](paper/weighted_obstruction_norms_en.tex) |
 
 ## 要旨
